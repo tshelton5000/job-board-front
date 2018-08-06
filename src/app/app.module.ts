@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { JobpostsComponent } from './jobposts/jobposts.component';
+import {SharedModule} from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { JobpostsComponent } from './jobposts/jobposts.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    
+    SharedModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
