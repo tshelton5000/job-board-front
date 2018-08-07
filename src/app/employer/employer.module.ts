@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MaterialModule } from '../material.module';
+import { EmployerRoutingModule} from '../employer/employer-routing.module';
+import { EmpDashboardComponent } from './emp-dashboard/emp-dashboard.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule,
+    EmployerRoutingModule,
   ],
-  declarations: []
+  declarations: [EmpDashboardComponent]
 })
 export class EmployerModule { }
