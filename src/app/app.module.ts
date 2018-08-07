@@ -7,22 +7,22 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { JobpostsComponent } from './jobposts/jobposts.component';
 import {SharedModule} from './shared/shared.module';
+import {StudentModule} from './student/student.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    JobpostsComponent
-   
+    JobpostsComponent   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    SharedModule
-
+    SharedModule,
+    StudentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
