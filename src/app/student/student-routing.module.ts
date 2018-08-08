@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-const studentRoutes: Routes = [
-];
+
+const studentRoutes: Routes = [];
 
 @NgModule({
     imports: [RouterModule.forChild(studentRoutes)],
