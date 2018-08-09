@@ -1,20 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { EmployerRoutingModule } from "./employer/employer-routing.module"
-import { JobpostsComponent } from './shared/jobposts/jobposts.component';
 
-const routes: Routes = [
-  {
-    path: 'posts',
-    component: JobpostsComponent
-  }
-];
+const routes: Routes = [];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes),
-    EmployerRoutingModule],
-
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
