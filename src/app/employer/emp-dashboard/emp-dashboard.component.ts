@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service';
 import { Observable } from 'rxjs';
-import { JobsUpdateComponent } from '../jobs-update/jobs-update.component'; 
-import { ModalService } from '../../module/modal.service';
+import { JobsUpdateComponent } from '../jobs-update/jobs-update.component';
 
 @Component({
   selector: 'app-emp-dashboard',
@@ -14,17 +13,10 @@ export class EmpDashboardComponent implements OnInit {
 
   users$: Object;
 
-  constructor(private data: DataService, private modalService: ModalService){ }
+  constructor(private data: DataService){ }
 
   ngOnInit() {
     this.bodyText = "";
-  }
- 
-  openModal(id: string) {
-    this.modalService.open(id);
-  }
-  closeModal(id: string) {
-    this.modalService.close(id);
   }
 }
 
