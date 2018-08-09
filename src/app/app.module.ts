@@ -1,15 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
-import { JobpostsComponent } from './jobposts/jobposts.component';
+import { JobpostsComponent } from './shared/jobposts/jobposts.component';
 import {SharedModule} from './shared/shared.module';
+import { EmployerModule } from './employer/employer.module';
+import { HttpClientModule } from '@angular/common/http';
 import {StudentModule} from './student/student.module';
-
-
 
 @NgModule({
   declarations: [
@@ -23,7 +23,10 @@ import {StudentModule} from './student/student.module';
     BrowserAnimationsModule,
     MaterialModule,
     SharedModule,
+    EmployerModule,
+    HttpClientModule,
     StudentModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
