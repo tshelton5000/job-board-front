@@ -9,13 +9,13 @@ import { JobpostsComponent } from './shared/jobposts/jobposts.component';
 import {SharedModule} from './shared/shared.module';
 import { EmployerModule } from './employer/employer.module';
 import { HttpClientModule } from '@angular/common/http';
+import {StudentModule} from './student/student.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    JobpostsComponent
-   
+    JobpostsComponent,   
   ],
   imports: [
     BrowserModule,
@@ -24,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     SharedModule,
     EmployerModule,
-    HttpClientModule
+    HttpClientModule,
+    StudentModule
 
   ],
   providers: [],
