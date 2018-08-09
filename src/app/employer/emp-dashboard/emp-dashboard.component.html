@@ -1,0 +1,16 @@
+<mat-card class = "allJobs">
+<mat-card-title>Your Jobs</mat-card-title>
+
+
+  <mat-card class= "eachJob" *ngFor="let user of users$">
+    <a routerLink="/details/{{user.id}}">{{ user.name }}</a>
+
+    
+      <mat-card-content>{{ user.email }}</mat-card-content>
+      <mat-card-content><a href="http://{{ user.website }}">{{ user.website }}</a></mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Update</button>
+    </mat-card-actions>
+  </mat-card>
+
+</mat-card>
