@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import {
     MatToolbarModule, MatButtonModule, MatCardModule,
 } from '@angular/material';
-import { PopupModule } from 'ng2-opd-popup'
+
 
 
 @NgModule({
