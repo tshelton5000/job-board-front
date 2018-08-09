@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
 
 @NgModule({
     imports: [
@@ -15,7 +16,7 @@ import { FormsModule } from '@angular/forms';
         FormsModule
     ],
     exports: [],
-    declarations: [AuthComponent, LoginComponent, SignupComponent]
+    declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent]
 })
 
 export class SharedModule {}
