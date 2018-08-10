@@ -1,10 +1,10 @@
 <mat-toolbar color="primary">
 <mat-toolbar-row>
-<button mat-button routerLink='/'> Home </button>
-<button mat-button routerLink='/jobposts'> Jobs </button>
-<span class = "spacer"></span>
-<button mat-button routerLink='/profile'>Profile </button>
-<button mat-button routerLink='/'>Employer Dashboard</button>
-
+    <button mat-button routerLink='/' >Home</button>
+    <span class="spacer"></span>
+    <button mat-button routerLink='/jobposts' >All Jobs </button>
+    <button mat-button routerLink='/' *ngIf="showEmpDash()" >Employer Dashboard</button>
+    <button mat-button routerLink='/profile' >Profile</button>
+    <button mat-button>Logout</button>
 </mat-toolbar-row>
 </mat-toolbar>
