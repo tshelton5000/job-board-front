@@ -3,5 +3,14 @@
     display: block;
     position: relative;
     width:100%;
-    margin:200px auto;
+    margin:150px auto;
+}
+hr{
+    padding: 0;
+    border: none;
+    border-top: 3px solid black;
+    text-align: center;
+    margin: 20px auto;
+    width: 200px;
+    height:10px;
 }
