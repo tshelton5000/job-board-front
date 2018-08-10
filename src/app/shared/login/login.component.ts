@@ -10,11 +10,6 @@ export class LoginComponent implements OnInit {
   email: string = '';
   password: string = '';
 
-  testVariables(){
-    console.log(this.email);
-    console.log(this.password);
-  }
-
   constructor(public authService: AuthService) { }
 
   ngOnInit() {
