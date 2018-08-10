@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service';
 import { Observable } from 'rxjs'; 
-import { } from '../../shared//job-details/job-details.component'
+
+
 @Component({
   selector: 'app-emp-dashboard',
   templateUrl: './emp-dashboard.component.html',
