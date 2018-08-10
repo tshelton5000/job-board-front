@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
   userType: string = 'Student';
-  sessionToken: string = 'this is a demo';
+  sessionToken: string = '';
 
-  hasToken(){
+  hasToken() {
     if (this.sessionToken){
       return true;
     } else {
