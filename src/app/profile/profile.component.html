@@ -5,22 +5,22 @@
     <hr>
     <div class="content">
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="First Name" type="text">
+            <h3>First Name: Billy {{ user.fname }}</h3>
         </mat-form-field>
     </div>
     <div class="content">
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="Last Name" type="text">
+            <h3>Last Name:Johnson{{ user.lname }}</h3>
         </mat-form-field>
     </div>
     <div class="content">
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="Company Name" type="text">
+            <h3>Company Name: {{user.company}}</h3>
         </mat-form-field>
     </div>
     <div class="content">
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="LinkendIn" type="text">
+            <h3> Social Media: </h3>
         </mat-form-field>
     </div>
     <button mat-raised-button type="submit" class="btn btn-danger pull-right">Update Profile</button>
