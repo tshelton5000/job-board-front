@@ -7,16 +7,23 @@ import { SignupComponent } from './signup/signup.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
+
 
 @NgModule({
     imports: [
         SharedRoutingModule,
         MaterialModule,
         CommonModule,
-        FormsModule
+        FormsModule,
+        
+
+
     ],
-    exports: [],
-    declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent]
+    
+    exports: [JobDetailsComponent],
+
+    declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent, JobDetailsComponent]
 })
 
 export class SharedModule {}
