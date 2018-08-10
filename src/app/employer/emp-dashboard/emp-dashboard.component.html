@@ -1,0 +1,22 @@
+<mat-card class = "allJobs">
+<mat-card-title>Your Jobs</mat-card-title>
+
+<div>
+  <mat-card class= "eachJob" *ngFor="let user of users$">
+    <a routerLink="/details/{{user.id}}">{{ user.name }}</a>
+
+    
+      <mat-card-content>{{ user.email }}</mat-card-content>
+      <mat-card-content><a href="http://{{ user.website }}">{{ user.website }}</a></mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="Update">Update</button>
+      <button mat-raised-button (click)="OpenModal()">Details</button>
+    </mat-card-actions>
+  </mat-card>
+  </div>
+  <app-job-details *ngIf = "modal"></app-job-details>
+  <div class = "createJob">
+  <app-jobs-create></app-jobs-create>
+  </div>
+</mat-card>
+  
