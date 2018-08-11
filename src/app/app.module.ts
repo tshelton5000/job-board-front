@@ -8,6 +8,7 @@ import { MaterialModule } from './material.module';
 import { JobpostsComponent } from './jobposts/jobposts.component';
 import {SharedModule} from './shared/shared.module';
 import {StudentModule} from './student/student.module';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -15,7 +16,8 @@ import {StudentModule} from './student/student.module';
   declarations: [
     AppComponent,
     NavBarComponent,
-    JobpostsComponent,   
+    JobpostsComponent,
+    ProfileComponent,   
   ],
   imports: [
     BrowserModule,
