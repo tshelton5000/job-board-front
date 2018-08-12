@@ -4,7 +4,7 @@ import {AuthComponent} from './auth/auth.component';
 import {SignupComponent} from './signup/signup.component';
 import {LoginComponent} from './login/login.component';
 import {PagenotfoundComponent} from '../pagenotfound/pagenotfound.component';
-import {AuthGuardService} from '../auth-guard.service'; //this is required for all auth guards on routing
+import {AuthGuardService} from '../authguard.service';
 
 const sharedRoutes: Routes = [
     {path: '', component: AuthComponent},
