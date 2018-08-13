@@ -8,14 +8,14 @@ import { MaterialModule } from './material.module';
 import { JobpostsComponent } from './jobposts/jobposts.component';
 import {SharedModule} from './shared/shared.module';
 import {StudentModule} from './student/student.module';
-
-
+import { EmployerModule } from './employer/employer.module'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    JobpostsComponent,   
+    JobpostsComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +23,11 @@ import {StudentModule} from './student/student.module';
     BrowserAnimationsModule,
     MaterialModule,
     SharedModule,
-    StudentModule
+    StudentModule,
+    EmployerModule,
+    HttpClientModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
