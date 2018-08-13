@@ -16,6 +16,10 @@ import { SharedModule } from '../shared/shared.module'
     SharedModule
 
   ],
+
+  exports: [JobsCreateComponent],
+
   declarations: [EmpDashboardComponent,JobsCreateComponent]
+
 })
 export class EmployerModule { }
