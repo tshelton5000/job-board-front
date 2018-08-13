@@ -18,9 +18,9 @@
 
 //  constructor(private data: DataService){ }
 
-  // ngOnInit() {this.data.getUsers().subscribe(
-  //   data=> this.users$ = data);
-  // }
+//   ngOnInit() {this.data.getUsers().subscribe(
+//     data=> this.users$ = data);
+//   }
 //  }
 
 
