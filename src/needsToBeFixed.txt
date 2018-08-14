@@ -1,0 +1,11 @@
+1. Create a guards file that holds all of your gaurds. 
+1a. There are 2 auth guard files, you only need one. Choose one, delete the other.
+2. Auth-service should be in a services folder. 
+2a. For the services that are shared by multiple services, they should be in the shared module.(auth-service)
+3. Material module should be in the shared folder.
+4. All excessive whitespace should be deleted. 
+5. Use Reactive Forms with Angular to build your forms -> https://angular.io/guide/reactive-forms 
+6. Naming of your CSS classes needs to refer to the data that is inside of it! "using the name, _1 doesn't tell anything about what is being styled"
+7. Job update in employer file doesn't do anything, delete it.
+8. Data Service doesn't mention what it's actually doing, please consider using another name.
+9. Jobs Create and Jobs Update should be under the same folders.
