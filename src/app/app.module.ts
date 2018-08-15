@@ -10,6 +10,7 @@ import {SharedModule} from './shared/shared.module';
 import {StudentModule} from './student/student.module';
 import { EmployerModule } from './employer/employer.module'
 import { HttpClientModule } from '@angular/common/http';
+import { ScrollbarModule } from 'ngx-scrollbar';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     StudentModule,
     EmployerModule,
     HttpClientModule,
+    ScrollbarModule
     
     
   ],

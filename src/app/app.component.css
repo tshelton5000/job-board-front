@@ -1,0 +1,9 @@
+body{
+    background-image: url('./assets/eleven-fifty-background-faded-rotated.png');
+   background-repeat: repeat;
+   background-size:cover;
+   background-position:center;
+   height:auto;
+			min-height:90vh;
+}
+

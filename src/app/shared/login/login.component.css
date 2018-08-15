@@ -1,3 +1,28 @@
 .input {
     display: block;
 }
+
+.bodyyyy{
+    
+    background-color: rgb(144, 105, 180,0);
+         
+    display: grid;
+       
+    padding: 7vw;
+    
+ }
+
+ .login{
+    padding: 2vw;
+    
+    height: 350px;
+    margin: auto;
+    width: 20%;
+}
+
+button{
+    background-color: #E24A52 !important;
+    margin: 1vw;
+    padding: .2vw;
+    color:white;
+}
