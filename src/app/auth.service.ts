@@ -53,9 +53,13 @@ export class AuthService {
     return this.http.post(`http://localhost:3000/student/signin`, {student: {email: email, password:password}})
   }
 
-  
+  signups(user){
+    return this.http.post(`http://localhost:3000/student/create`, {user: {first_name: user.fName, last_name: user.lname, email:user.email, password:user.password}})
+  }
 
-
+//   signupe(user){
+//     return 
+//   }
 }
 
 

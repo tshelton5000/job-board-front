@@ -5,24 +5,26 @@
   <mat-card-content>
     <img src="../../../assets/icons8-account-50.png">
     <mat-form-field class="input">
-      <input [(ngModel)]="fName" matInput placeholder="First Name" required>
+      <input [(ngModel)]="user.fName" matInput placeholder="First Name" required>
     </mat-form-field>
     <mat-form-field class="input">
-      <input [(ngModel)]="lName" matInput placeholder="Last Name" required>
+      <input [(ngModel)]="user.lName" matInput placeholder="Last Name" required>
     </mat-form-field>
     <mat-form-field *ngIf="!authService.isStudent()" class="input"> 
-      <input [(ngModel)]="company" matInput placeholder="Company Affiliation" required>
+      <input [(ngModel)]="user.company" matInput placeholder="Company Affiliation" required>
     </mat-form-field>
     <mat-form-field class="input">
-      <input [(ngModel)]="email" matInput placeholder="Email" required>
+      <input [(ngModel)]="user.email" matInput placeholder="Email" required>
     </mat-form-field>
     <mat-form-field class="input">
-      <input [(ngModel)]="password" matInput placeholder="New Password" required>
+      <input [(ngModel)]="user.password" matInput placeholder="New Password" required>
     </mat-form-field>
     <mat-form-field class="input">
-      <input [(ngModel)]="confirmPass" matInput placeholder="Confirm Password" required>
+      <input [(ngModel)]="user.confirmPass" matInput placeholder="Confirm Password" required>
     </mat-form-field>
+    
   </mat-card-content>
+
   <mat-card-footer>
     <button mat-raised-button *ngIf="authService.isStudent()" routerLink="/studentLogin">To Login</button>
     <button mat-raised-button *ngIf="authService.isStudent()">Submit</button>
