@@ -1,14 +1,9 @@
 import { NgModule } from '@angular/core';
 import {
-<<<<<<< HEAD
-    MatToolbarModule, MatButtonModule
-=======
-    MatToolbarModule, MatButtonModule, MatCardModule, MatSelectModule, 
->>>>>>> emp update
+    MatToolbarModule, MatButtonModule, MatCardModule, MatSelectModule,
 } from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import {MatCardModule} from '@angular/material';
 
 @NgModule({
     imports: [
