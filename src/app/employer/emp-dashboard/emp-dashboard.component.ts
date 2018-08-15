@@ -9,7 +9,7 @@ import { } from '../../shared/job-details/job-details.component'
 })
 export class EmpDashboardComponent implements OnInit {
 
-  users$: Object;
+  jobs$: Object;
   modal: boolean = false;
 
 OpenModal(){
@@ -18,8 +18,8 @@ this.modal = true
 
  constructor(private data: DataService){ }
 
-  ngOnInit() {this.data.getUsers().subscribe(
-    data=> this.users$ = data);
+  ngOnInit() {this.data.getJobs().subscribe(
+    data=> (console.log(this.jobs$ = data)));
   }
  }
 
