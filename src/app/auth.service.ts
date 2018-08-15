@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Router } from '@angular/router'
 @Injectable({
   providedIn: 'root'
 })
@@ -45,19 +45,21 @@ export class AuthService {
     }
   }
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private _router: Router) { }
 
-  login(email: string, password: string) {
+  logine(email: string, password: string) {
     return this.http.post(`http://localhost:3000/employer/signin`, {employer: {email: email, password: password}} )
   }
 
-  // getToken(){
-  //   return sessionStorage.getItem('token')
-  // }
-  // loggedIn(){
-  //   return !!sessionStorage.getItem('token')
-  // }
+  logoute() {
+    sessionStorage.removeItem('sessionToken')
+    this._router.navigate(['/'])
+  }
 
+  signupe(employer) {
+    return this.http.post('http://localhost:3000/employer/create', {employer: {first_name: employer.first_name, last_name: employer.last_name, email: employer.email, password: employer.password, confirmPass: employer.confirmPass, company_name: employer.company_name}})
+  }
+ 
  
 
 }
