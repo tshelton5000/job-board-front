@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   constructor(public authService: AuthService, private _router: Router) { }
 
-employerHandleSubmit(){
+ handleSubmite(){
    this.authService.logine(this.email, this.password)
    .subscribe(res => { sessionStorage.setItem('sessionToken', this.sessionToken)
     this._router.navigate(['/jobposts'])

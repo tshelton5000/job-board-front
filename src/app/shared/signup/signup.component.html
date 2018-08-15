@@ -5,19 +5,19 @@
   <mat-card-content>
     <img src="../../../assets/icons8-account-50.png">
     <mat-form-field class="input">
-      <input [(ngModel)]="fName" matInput placeholder="First Name" required>
+      <input [(ngModel)]="employer.first_name" matInput placeholder="First Name" required>
     </mat-form-field>
     <mat-form-field class="input">
-      <input [(ngModel)]="lName" matInput placeholder="Last Name" required>
+      <input [(ngModel)]="employer.last_name" matInput placeholder="Last Name" required>
     </mat-form-field>
     <mat-form-field *ngIf="!authService.isStudent()" class="input"> 
-      <input [(ngModel)]="company" matInput placeholder="Company Affiliation" required>
+      <input [(ngModel)]="employer.company_name" matInput placeholder="Company Affiliation" required>
     </mat-form-field>
     <mat-form-field class="input">
-      <input [(ngModel)]="email" matInput placeholder="Email" required>
+      <input [(ngModel)]="employer.email" matInput placeholder="Email" required>
     </mat-form-field>
     <mat-form-field class="input">
-      <input [(ngModel)]="password" matInput placeholder="New Password" required>
+      <input [(ngModel)]="employer.password" matInput placeholder="New Password" required>
     </mat-form-field>
     <mat-form-field class="input">
       <input [(ngModel)]="confirmPass" matInput placeholder="Confirm Password" required>
@@ -27,6 +27,6 @@
     <button mat-raised-button *ngIf="authService.isStudent()" routerLink="/studentLogin">To Login</button>
     <button mat-raised-button *ngIf="authService.isStudent()">Submit</button>
     <button mat-raised-button *ngIf="!authService.isStudent()" routerLink="/employerLogin">To Login</button>
-    <button mat-raised-button *ngIf="!authService.isStudent()">Submit</button>
+    <button mat-raised-button *ngIf="!authService.isStudent()" (click)="EmployerSignup()">Submit</button>
   </mat-card-footer>
 </mat-card>
