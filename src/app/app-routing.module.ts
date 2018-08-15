@@ -5,7 +5,8 @@ import { EmpDashboardComponent } from './employer/emp-dashboard/emp-dashboard.co
 
 const routes: Routes = [
   {path:'employer',
-  component: EmpDashboardComponent}
+  component: EmpDashboardComponent
+}
 ];
 
 @NgModule({

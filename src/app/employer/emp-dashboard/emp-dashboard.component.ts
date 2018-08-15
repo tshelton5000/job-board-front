@@ -18,7 +18,7 @@ this.modal = true
 
  constructor(private data: DataService){ }
 
-  ngOnInit() {this.data.getUsers().subscribe(
+  ngOnInit() {this.data.getAll().subscribe(
     data=> this.users$ = data);
   }
  }
