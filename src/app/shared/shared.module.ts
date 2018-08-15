@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProfileComponent } from '../profile/profile.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FooterComponent } from './footer/footer.component';
     
     exports: [JobDetailsComponent, FooterComponent],
 
-    declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent, JobDetailsComponent, FooterComponent]
-})
+
+    declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent, JobDetailsComponent, FooterComponent, ProfileComponent]
+)
 
 export class SharedModule {}
