@@ -1,3 +1,15 @@
 .spacer{
     width: 80vw;
 }
+mat-toolbar{
+    background-color: #E24A52 !important;
+}
+
+.logo{
+    width: 11.5vw;
+}
+
+.logobutton{
+ background-color: #E24A52 !important;
+ padding:0vw 2vw;
+}

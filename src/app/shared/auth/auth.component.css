@@ -1,0 +1,26 @@
+.bodyy{
+   text-align: center;
+        background-color: rgb(144, 105, 180,0);
+        
+      display: grid;
+      
+    padding: 7vw;
+    
+}
+.welcome{
+    padding: 3vw;
+    
+    height: 350px;
+    margin: auto;
+    width: 20%;
+}
+u{
+    color:gray;
+    
+}
+button{
+    background-color: #E24A52 !important;
+    margin: 1vw;
+    padding: .2vw;
+    color:white;
+}

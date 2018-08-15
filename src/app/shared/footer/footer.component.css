@@ -1,0 +1,14 @@
+.spacer{
+    width: 80vw;
+}
+mat-toolbar{
+    background-color: #E24A52 !important;
+    height: 50px;
+    position: fixed;
+    left:0;
+    bottom:0;
+}
+
+.logo{
+    width: 11.5vw;
+}

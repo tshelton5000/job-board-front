@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialog,} from '../../../../node_modules/@angular/material';
+import { MatDialog,} from '@angular/material';
 
 
 export interface DialogData {
