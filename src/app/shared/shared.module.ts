@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
+import { ProfileComponent } from '../profile/profile.component';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { JobDetailsComponent } from './job-details/job-details.component';
     
     exports: [JobDetailsComponent],
 
-    declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent, JobDetailsComponent]
+    declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent, JobDetailsComponent, ProfileComponent]
 })
 
 export class SharedModule {}
