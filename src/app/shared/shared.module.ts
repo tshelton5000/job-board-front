@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
+import { FooterComponent } from './footer/footer.component';
 import { ProfileComponent } from '../profile/profile.component';
 
 
@@ -22,9 +23,10 @@ import { ProfileComponent } from '../profile/profile.component';
 
     ],
     
-    exports: [JobDetailsComponent],
+    exports: [JobDetailsComponent, FooterComponent],
 
-    declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent, JobDetailsComponent, ProfileComponent]
-})
+
+    declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent, JobDetailsComponent, FooterComponent, ProfileComponent]
+)
 
 export class SharedModule {}

@@ -7,18 +7,23 @@
     <mat-form-field class="input">
       <input [(ngModel)]="jobTitle" matInput placeholder="Job Title" required>
     </mat-form-field>
-    <mat-form-field  class="input"> 
-      <input [(ngModel)]="jobDescription" matInput placeholder="Job Description" required>
+    <br>
+    <mat-form-field  class="description"> 
+      <textarea [(ngModel)]="jobDescription" matInput placeholder="Job Description" required></textarea>
     </mat-form-field>
+    <br>
     <mat-form-field class="input">
       <input [(ngModel)]="companyName" matInput placeholder="Company Name" required>
     </mat-form-field>
+    <br>
     <mat-form-field class="input">
       <input [(ngModel)]="employeerID" matInput placeholder="Employeer ID" required>
     </mat-form-field>
+    <br>
     <mat-form-field class="input">
       <input [(ngModel)]="companyAddress" matInput placeholder="Company Address" required>
     </mat-form-field>
+    <br>
       <mat-form-field class="select">
         <mat-select [(ngModel)]="jobType"  matSelect placeholder="Job Type"required>
           <mat-option value="fulltime">Full Time</mat-option>
