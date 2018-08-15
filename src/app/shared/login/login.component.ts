@@ -10,22 +10,34 @@ import { Router } from "@angular/router";
 export class LoginComponent implements OnInit {
   email: string = '';
   password: string = '';
-  sessionToken: string = '';
+  token: any
 
   constructor(public authService: AuthService, private _router: Router) { }
 
  handleSubmite(){
    this.authService.logine(this.email, this.password)
-   .subscribe(res => { sessionStorage.setItem('sessionToken', this.sessionToken)
+   .subscribe((res: any) => { 
+    this.token = res.sessionToken
+    sessionStorage.setItem('token', this.token)
     this._router.navigate(['/jobposts'])
+  console.log(this.token)
   },
   err => console.log(err)
- 
- 
-
-  
-   
    )}
+
+   handleSubmits(){
+    this.authService.logins(this.email, this.password)
+    .subscribe((res: any) => { 
+     this.token = res.sessionToken
+     sessionStorage.setItem('token', this.token)
+     this._router.navigate(['/jobposts'])
+   console.log(this.token)
+   },
+   err => console.log(err)
+    )}
+
+
+
 
   ngOnInit() {
   }

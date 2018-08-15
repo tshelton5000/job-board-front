@@ -5,6 +5,7 @@ import {SignupComponent} from './signup/signup.component';
 import {LoginComponent} from './login/login.component';
 import {PagenotfoundComponent} from '../pagenotfound/pagenotfound.component';
 import {AuthGuardService} from '../authguard.service';
+import { JobpostsComponent } from '../jobposts/jobposts.component';
 
 const sharedRoutes: Routes = [
     {path: '', component: AuthComponent},
