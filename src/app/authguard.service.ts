@@ -7,7 +7,7 @@ export class AuthGuardService implements CanActivate{
     constructor(private authService: AuthService){}
 
     canActivate(){
-        if (this.authService.hasToken() === true){
+        if (sessionStorage.token){
             return true;
         } else {
             return false;

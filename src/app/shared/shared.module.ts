@@ -27,6 +27,6 @@ import { ProfileComponent } from '../profile/profile.component';
 
 
     declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent, JobDetailsComponent, FooterComponent, ProfileComponent]
-)
+})
 
 export class SharedModule {}
