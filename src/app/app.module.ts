@@ -9,7 +9,8 @@ import { JobpostsComponent } from './jobposts/jobposts.component';
 import {SharedModule} from './shared/shared.module';
 import {StudentModule} from './student/student.module';
 import { EmployerModule } from './employer/employer.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './token.interceptor';
 
 @NgModule({
   declarations: [
@@ -26,10 +27,13 @@ import { HttpClientModule } from '@angular/common/http';
     StudentModule,
     EmployerModule,
     HttpClientModule,
-    
-    
+
   ],
-  providers: [],
+  providers: [  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
    .subscribe((res: any) => { 
     this.token = res.sessionToken
     sessionStorage.setItem('token', this.token)
-    this._router.navigate(['/jobposts'])
+    this._router.navigate(['/employer'])
   console.log(this.token)
   },
   err => console.log(err)

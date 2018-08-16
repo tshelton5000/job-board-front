@@ -19,7 +19,7 @@ this.modal = true
  constructor(private data: DataService){ }
 
   ngOnInit() {this.data.getJobs().subscribe(
-    data=> (console.log(this.jobs$ = data)));
+    data=> console.log((this.jobs$ = data)));
   }
  }
 
