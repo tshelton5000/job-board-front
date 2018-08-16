@@ -9,8 +9,9 @@ import { JobpostsComponent } from './jobposts/jobposts.component';
 import {SharedModule} from './shared/shared.module';
 import {StudentModule} from './student/student.module';
 import { EmployerModule } from './employer/employer.module';
-import { HttpClientModule } from '@angular/common/http';
-import { ScrollbarModule } from 'ngx-scrollbar';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './token.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -27,11 +28,15 @@ import { ScrollbarModule } from 'ngx-scrollbar';
     StudentModule,
     EmployerModule,
     HttpClientModule,
-    ScrollbarModule
+ 
     
     
   ],
-  providers: [],
+  providers: [  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

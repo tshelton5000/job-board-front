@@ -18,15 +18,12 @@ import { ProfileComponent } from '../profile/profile.component';
         MaterialModule,
         CommonModule,
         FormsModule,
-        
-
-
     ],
     
     exports: [JobDetailsComponent, FooterComponent],
 
 
     declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent, JobDetailsComponent, FooterComponent, ProfileComponent]
-)
+})
 
 export class SharedModule {}
