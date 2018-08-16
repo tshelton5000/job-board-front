@@ -1,4 +1,15 @@
 .description{
     width: 100%;
-    min-height: 2vh;
+    
+}
+
+.text{
+    height: 2vw;
+}
+.cname{
+    float: right;
+    width:49%;
+}
+.jname{
+    width:49%
 }
