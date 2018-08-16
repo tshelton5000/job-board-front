@@ -1,0 +1,66 @@
+.allJobs{
+    background-color: rgb(144, 105, 180,0);
+    
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding:0vw 0vw 0vw 2.5vw;
+
+
+    
+}
+p{
+    font-family: 'Roboto', sans-serif;   
+}
+h1{
+    font-size: 150%;
+    font-family: 'Roboto', sans-serif;
+}
+.title{
+    padding:.5vw 0vw 0vw 2.5vw;
+    
+}
+.Mname{
+ 
+    font-family: 'Roboto', sans-serif;
+}
+
+.jobscon{
+    overflow: auto;
+    width: 24.5vw;
+    
+    height: 80vh;
+    
+    
+    
+    
+}
+
+.createJob{
+   
+   margin: 1.5vw;
+    width:100%;
+    float:right;
+}
+.cool{
+    height: 50px;
+    
+}
+.Cname{
+    font-family: 'Roboto', sans-serif; 
+   
+    color: gray !important;
+}
+.butt{
+    margin: .5vw .1vw;
+    float: right;
+}
+
+
+.eachJob{
+ max-width: 400px;
+ height: 200px;
+ 
+ 
+ background-color: white;
+ margin: .5vw 0vw;
+};

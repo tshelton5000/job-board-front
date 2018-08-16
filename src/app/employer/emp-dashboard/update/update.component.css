@@ -1,0 +1,42 @@
+mat-card-content{
+    width:50vw;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+}
+.description{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text{
+    height: 2vw;
+    font-family: 'Roboto', sans-serif;
+}
+.cname{
+    font-family: 'Roboto', sans-serif;
+    float: right;
+    width:49%;
+}
+.jname{
+    width:49%;
+    font-family: 'Roboto', sans-serif;
+}
+.site{
+    width: 49%;
+    font-family: 'Roboto', sans-serif;
+}
+.address{
+    width: 49%;
+    font-family: 'Roboto', sans-serif;
+}
+.select{
+    float:right;
+    width:49%;
+    font-family: 'Roboto', sans-serif;
+}
+
+button{
+    float:right;
+}

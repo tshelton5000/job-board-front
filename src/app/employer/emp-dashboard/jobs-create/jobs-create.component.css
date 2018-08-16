@@ -13,3 +13,17 @@
 .jname{
     width:49%
 }
+.site{
+    width: 49%;
+}
+.address{
+    width: 49%;
+}
+.select{
+    float:right;
+    width:49%;
+}
+
+button{
+    float:right;
+}
