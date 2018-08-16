@@ -8,16 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  student:{
-  fName:  '';
-  lName:  '';
-  company: '';
-  email:  '';
-  password:  '';
-  confirmPass:  '';
-}
-  
-  employer = {
+  user = {
   first_name:'',
   last_name:'',
   company_name:'',
@@ -25,13 +16,23 @@ export class SignupComponent implements OnInit {
   password:'',
   confirmPass:''
   }
-  sessionToken: string = '';
+  token: any
 
   constructor(public authService: AuthService, private _router: Router) { }
 
-  EmployerSignup () {
-    this.authService.signupe(this.employer).subscribe ( res => {
-      sessionStorage.setItem('sessionToken', this.sessionToken)
+  Signupe () {
+    this.authService.signupe(this.user).subscribe((res: any) => { 
+      this.token = res.sessionToken
+      sessionStorage.setItem('token', this.token)
+      this._router.navigate(['/jobposts'])
+    },
+    err => console.log(err)
+  )
+}
+  Signups () {
+    this.authService.signups(this.user).subscribe ( (res: any) => {
+      this.token = res.sessionToken
+      sessionStorage.setItem('token', this.token)
       this._router.navigate(['/jobposts'])
     },
     err => console.log(err)
@@ -40,6 +41,5 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {
   }
-
 
 }
