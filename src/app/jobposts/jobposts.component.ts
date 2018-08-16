@@ -9,8 +9,10 @@ import { DataService } from '../data.service';
 export class JobpostsComponent implements OnInit {
 
 
- constructor(){ }
+ constructor(private data: DataService){ }
 
-  ngOnInit() {}
+  ngOnInit() {
+     
+    }
+  }
 
-}

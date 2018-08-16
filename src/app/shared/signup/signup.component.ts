@@ -24,7 +24,7 @@ export class SignupComponent implements OnInit {
     this.authService.signupe(this.user).subscribe((res: any) => { 
       this.token = res.sessionToken
       sessionStorage.setItem('token', this.token)
-      this._router.navigate(['/jobposts'])
+      this._router.navigate(['/employer'])
     },
     err => console.log(err)
   )
