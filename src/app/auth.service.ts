@@ -9,7 +9,7 @@ export class AuthService {
   userType: string = '';
   sessionToken: string = 'test';
 
- 
+
   hasToken() {
     if (this.sessionToken) {
       return true;
