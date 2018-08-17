@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscriber } from '../../../../../node_modules/rxjs';
+import { DataService } from '../../../data.service';
 
 @Component({
   selector: 'app-jobs-create',
@@ -6,17 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./jobs-create.component.css']
 })
 export class JobsCreateComponent implements OnInit {
-  jobTitle: string = '';
-  jobDescription: string = '';
-  companyName: string = '';
-  employeerID: string = '';
-  companySite: string = '';
-  companyAddress: string = '';
-  jobType: string = '';
-  datePosted: Date= new Date; 
-  constructor() { }
+  job = {
+  jobTitle:'',
+  jobDescription:'',
+  companyName:'',
+  employeerID:'',
+  companySite:'',
+  companyAddress:'',
+  jobType:''
+} 
+
+  constructor(private data: DataService) { }
 
   ngOnInit() {
   }
-
+  // createNewJob(){
+  //   this.data.createJobs(this.job).subscribe(console.log(this.job))
+  // }
 }
