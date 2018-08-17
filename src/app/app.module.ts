@@ -12,6 +12,7 @@ import { EmployerModule } from './employer/employer.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './token.interceptor';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,6 @@ import { TokenInterceptor } from './token.interceptor';
     StudentModule,
     EmployerModule,
     HttpClientModule,
-
   ],
   providers: [  {
     provide: HTTP_INTERCEPTORS,

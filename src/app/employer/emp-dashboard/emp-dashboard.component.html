@@ -7,15 +7,15 @@
 <section class="jobscon">
   <mat-card class= "eachJob" *ngFor="let job of jobs$">
     <div class="cool">
-    <mat-card-title><mat-checkbox class="Mname">Job Title</mat-checkbox></mat-card-title>
+    <mat-card-title><mat-checkbox class="Mname">{{job.job_title}}</mat-checkbox></mat-card-title>
     
 
     
-      <mat-card-subtitle class="Cname">Company Name</mat-card-subtitle>
+      <mat-card-subtitle class="Cname">{{job.company_name}}</mat-card-subtitle>
 
   </div>
 
-      <mat-card-content><p>When things happen - enjoy them. They're little gifts. We have a fantastic little sky! Didn't you know you had that much power? You can move mountains. You can do anything. Let's have a happy little tree in here.</p></mat-card-content>
+      <mat-card-content><p>{{job.job_description}}</p></mat-card-content>
 
 
 
