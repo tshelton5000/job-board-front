@@ -39,4 +39,9 @@ h1{
 
 button{
     float:right;
+    margin: .5vw .1vw;
+    
+    background-color: #E24A52 !important;
+  
+    color:white;
 }

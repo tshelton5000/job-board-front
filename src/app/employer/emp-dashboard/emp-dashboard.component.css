@@ -49,6 +49,9 @@ h1{
 .butt{
     margin: .5vw .1vw;
     float: right;
+    background-color: #E24A52 !important;
+  
+    color:white;
 }
 
 
