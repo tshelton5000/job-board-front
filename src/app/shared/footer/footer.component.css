@@ -1,14 +1,16 @@
-.spacer{
-    width: 80vw;
-}
-mat-toolbar{
+
+.k{
     background-color: #E24A52 !important;
-    height: 50px;
+    height: 30px;
     position: fixed;
-    left:0;
-    bottom:0;
+    width:100%;
+    text-align: right;
+    
+    
 }
 
-.logo{
-    width: 11.5vw;
+p{
+    margin: 5px;
+    color: #af363c;
+    font-family: 'Roboto', sans-serif;
 }

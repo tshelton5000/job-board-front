@@ -1,7 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { DataService } from '../../data.service';
+
+
+import {MatDialog} from '@angular/material';
+import { DetailsComponent } from './details/details.component';
+import { UpdateComponent } from './update/update.component';
+
 import { Observable } from 'rxjs/Observable'; 
 import { Jobs } from '../../models/jobs';
+
 @Component({
   selector: 'app-emp-dashboard',
   templateUrl: './emp-dashboard.component.html',
@@ -17,7 +24,8 @@ OpenModal(){
 this.modal = true
 }
 
- constructor(private data: DataService){ }
+ constructor(private data: DataService, public dialog: MatDialog){ }
+
 
   ngOnInit() {this.data.getJobs().subscribe(
    (res: any) => console.log((this.jobs = res.jobs)));
@@ -27,3 +35,4 @@ this.modal = true
 
 
 //  data => (console.log(this.jobs = data)));
+
