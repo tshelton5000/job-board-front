@@ -1,9 +1,14 @@
 import { Component, OnInit, } from '@angular/core';
 import { DataService } from '../../data.service';
-import { Observable } from 'rxjs'; 
+
+
 import {MatDialog} from '@angular/material';
 import { DetailsComponent } from './details/details.component';
 import { UpdateComponent } from './update/update.component';
+
+import { Observable } from 'rxjs/Observable'; 
+import { Jobs } from '../../models/jobs';
+
 @Component({
   selector: 'app-emp-dashboard',
   templateUrl: './emp-dashboard.component.html',
@@ -11,8 +16,9 @@ import { UpdateComponent } from './update/update.component';
 })
 export class EmpDashboardComponent implements OnInit {
 
-  users$: Object;
+  // jobs$: any;
   modal: boolean = false;
+  jobs: any;
 
 OpenModal(){
 this.modal = true
@@ -20,18 +26,13 @@ this.modal = true
 
  constructor(private data: DataService, public dialog: MatDialog){ }
 
-  ngOnInit() {this.data.getUsers().subscribe(
-    data=> this.users$ = data);
-  }
-  openDetails(){
-    this.dialog.open(DetailsComponent);
-    
-  }
 
-  openUpdate(){
-    this.dialog.open(UpdateComponent);
-  }
+  ngOnInit() {this.data.getJobs().subscribe(
+   (res: any) => console.log((this.jobs = res.jobs)));
+}
+
  }
 
 
+//  data => (console.log(this.jobs = data)));
 
