@@ -18,9 +18,6 @@ import { ProfileComponent } from '../profile/profile.component';
         MaterialModule,
         CommonModule,
         FormsModule,
-        
-
-
     ],
     
     exports: [JobDetailsComponent, FooterComponent],

@@ -10,6 +10,7 @@ export class AuthService {
   sessionToken: string = '';
   userObject: any;
 
+
   hasToken() {
     if (this.sessionToken) {
       return true;
