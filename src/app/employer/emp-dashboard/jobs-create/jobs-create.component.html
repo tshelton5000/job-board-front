@@ -6,25 +6,25 @@
 
    
     <mat-form-field class="jname">
-      <input [(ngModel)]="jobTitle" matInput placeholder="Job Title" required> 
+      <input [(ngModel)]="job.job_title" matInput placeholder="Job Title" required> 
     </mat-form-field> 
     <mat-form-field class="cname">
-        <input [(ngModel)]="companyName" matInput placeholder="Company Name" required>
+        <input [(ngModel)]="job.company_name" matInput placeholder="Company Name" required>
       </mat-form-field>
 
     <br>
     <mat-form-field  class="description"> 
-      <textarea rows="10" [(ngModel)]="jobDescription" matInput placeholder="Job Description" required></textarea>
+      <textarea rows="10" [(ngModel)]="job.job_description" matInput placeholder="Job Description" required></textarea>
     </mat-form-field>
     <br>
    
     <br>
     <mat-form-field class="site">
-      <input [(ngModel)]="employeerID" matInput placeholder="Company Website" required>
+      <input [(ngModel)]="job.employeerID" matInput placeholder="Company Website" required>
     </mat-form-field>
 
     <mat-form-field class="select">
-        <mat-select [(ngModel)]="jobType"  matSelect placeholder="Job Type"required>
+        <mat-select [(ngModel)]="job.job_type"  matSelect placeholder="Job Type"required>
           <mat-option value="fulltime">Full Time</mat-option>
           <mat-option value="parttime">Part Time</mat-option>
           <mat-option value="contract">Contract</mat-option>
@@ -32,10 +32,10 @@
       </mat-form-field>
     <br>
     <mat-form-field class="address">
-      <input [(ngModel)]="companyAddress" matInput placeholder="Company Address" required>
+      <input [(ngModel)]="job.company_address" matInput placeholder="Company Address" required>
     </mat-form-field>
 
-    <button mat-raised-button>Submit</button>
+    <button mat-raised-button (click)='createNewJob()'>Submit</button>
     <br>
    
   </mat-card-content>

@@ -9,10 +9,10 @@ import { DataService } from '../../../data.service';
 })
 export class JobsCreateComponent implements OnInit {
   job = {
-  jobTitle:'',
-  jobDescription:'',
-  companyName:'',
-  employeerID:'',
+  job_title:'',
+  job_description:'',
+  company_name:'',
+  employerID:'',
   companySite:'',
   companyAddress:'',
   jobType:''
@@ -22,7 +22,7 @@ export class JobsCreateComponent implements OnInit {
 
   ngOnInit() {
   }
-  // createNewJob(){
-  //   this.data.createJobs(this.job).subscribe(console.log(this.job))
-  // }
+   createNewJob(){
+     this.data.createJobs(this.job).subscribe((res:any) => console.log(this.job = res.job))
+  }
 }

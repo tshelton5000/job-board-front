@@ -21,17 +21,8 @@ export class DataService {
   getJobs(){
     return this.http.get(`${url}/job`)
   }
-  createJobs(jobs: Jobs){
-    return this.http.post(`${url}/job/create`, jobs)
+  createJobs(job){
+    return this.http.post(`${url}/job/create`, {job: {job_title: job.job_title, job_description: job.job_description, company_name: job.company_name, company_address:job.company_address, company_site:job.company_site, job_type:job.job_type, employerID: job.employerID }}
+    )}
   }
-  // getUsers() {
-  //   return this.http.get('https://jsonplaceholder.typicode.com/users')
-  // }
-  // getUser(){
-  //   if(user==="student"){
-  //   return this.http.get("http://localhost:3000/student/:id")
-  // } else {
-  //   return this.http.get("http://localhost:3000/employer/:id")
-  
-  // }
-}
+
