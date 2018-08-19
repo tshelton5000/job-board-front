@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service';
 import { Observable } from 'rxjs'; 
-import { } from '../../shared//job-details/job-details.component'
+import { } from '../../shared/job-details/job-details.component'
 @Component({
   selector: 'app-emp-dashboard',
   templateUrl: './emp-dashboard.component.html',
@@ -9,7 +9,7 @@ import { } from '../../shared//job-details/job-details.component'
 })
 export class EmpDashboardComponent implements OnInit {
 
-  jobs$: Object;
+  jobs$: any;
   modal: boolean = false;
 
 OpenModal(){
@@ -19,8 +19,6 @@ this.modal = true
  constructor(private data: DataService){ }
 
   ngOnInit() {this.data.getJobs().subscribe(
-    data=> (console.log(this.jobs$ = data)));
+    (data: any) => (console.log(this.jobs$ = data.jobs)));
   }
  }
-
-

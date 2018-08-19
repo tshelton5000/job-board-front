@@ -6,6 +6,7 @@ import {LoginComponent} from './login/login.component';
 import {PagenotfoundComponent} from '../pagenotfound/pagenotfound.component';
 import { ProfileComponent } from '../profile/profile.component';
 import {AuthGuardService} from '../authguard.service';
+import { JobpostsComponent } from '../jobposts/jobposts.component';
 
 const sharedRoutes: Routes = [
     {path: '', component: AuthComponent},
@@ -14,6 +15,7 @@ const sharedRoutes: Routes = [
     {path: 'employerSignup', component: SignupComponent},
     {path: 'studentLogin', component: LoginComponent},
     {path: 'employerLogin', component: LoginComponent},
+    {path: 'jobposts', component: JobpostsComponent, canActivate: [AuthGuardService]},
     {path:'**', component: PagenotfoundComponent} //this path needs to be at the bottom for the 404 route to work
 ];
 

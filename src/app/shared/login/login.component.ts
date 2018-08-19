@@ -10,14 +10,17 @@ import { Router } from "@angular/router";
 export class LoginComponent implements OnInit {
   email: string = '';
   password: string = '';
-  sessionToken: string = '';
+  token: any
 
   constructor(public authService: AuthService, private _router: Router) { }
 
-employerHandleSubmit(){
+ handleSubmite(){
    this.authService.logine(this.email, this.password)
-   .subscribe(res => { sessionStorage.setItem('sessionToken', this.sessionToken)
-    this._router.navigate(['/jobposts'])
+   .subscribe((res: any) => { 
+    this.token = res.sessionToken
+    sessionStorage.setItem('token', this.token)
+    this._router.navigate(['/employer'])
+  console.log(this.token)
   },
   err => console.log(err)   
    )
@@ -25,16 +28,28 @@ employerHandleSubmit(){
 
 studentHandleSubmit(){
     this.authService.logins(this.email, this.password)
-    .subscribe(res => {sessionStorage.setItem('sessionToken', this.sessionToken)
+    .subscribe(res => {sessionStorage.setItem('sessionToken', this.token)
     this._router.navigate(['/jobposts'])
   },
   err => console.log(err)
-  )
-}  
+   )}
 
-ngOnInit() {
+   handleSubmits(){
+    this.authService.logins(this.email, this.password)
+    .subscribe((res: any) => { 
+     this.token = res.sessionToken
+     sessionStorage.setItem('token', this.token)
+     this._router.navigate(['/jobposts'])
+   console.log(this.token)
+   },
+   err => console.log(err)
+    )}
 
-}
+
+
+
+  ngOnInit() {
+  }
 
   // login(){
   //   this.authService.login(this.email, this.password, this.role).subscribe(
