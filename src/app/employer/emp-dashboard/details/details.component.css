@@ -8,6 +8,9 @@
 
     
 }
+p{
+    font-family: 'Roboto', sans-serif;   
+}
 h1{
     font-size: 150%;
     font-family: 'Roboto', sans-serif;
@@ -17,8 +20,8 @@ h1{
     
 }
 .Mname{
-    color:black !important;
-    float: left;
+ 
+    font-family: 'Roboto', sans-serif;
 }
 
 .jobscon{
@@ -43,15 +46,13 @@ h1{
     
 }
 .Cname{
-    float:right;
+    font-family: 'Roboto', sans-serif; 
+   
     color: gray !important;
 }
 .butt{
     margin: .5vw .1vw;
     float: right;
-    background-color: #E24A52 !important;
-  
-    color:white;
 }
 
 
@@ -63,4 +64,3 @@ h1{
  background-color: white;
  margin: .5vw 0vw;
 };
-

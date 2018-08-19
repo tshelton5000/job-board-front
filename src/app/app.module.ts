@@ -8,8 +8,21 @@ import { MaterialModule } from './material.module';
 import { JobpostsComponent } from './jobposts/jobposts.component';
 import {SharedModule} from './shared/shared.module';
 import {StudentModule} from './student/student.module';
-import { EmployerModule } from './employer/employer.module';
-import { HttpClientModule } from '@angular/common/http';
+
+import { EmployerModule } from './employer/employer.module'
+
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { DetailsComponent } from './employer/emp-dashboard/details/details.component';
+import { UpdateComponent } from './employer/emp-dashboard/update/update.component';
+
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './token.interceptor';
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,10 +37,20 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     StudentModule,
     EmployerModule,
-    HttpClientModule
+    HttpClientModule,
+
+    MatDialogModule,
+    
+    
     
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true,
+  }],
+  bootstrap: [AppComponent],
+  entryComponents: [DetailsComponent, UpdateComponent] 
+
 })
 export class AppModule { }

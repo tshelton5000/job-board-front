@@ -1,0 +1,41 @@
+<div class="upde">
+    <mat-card-header>
+      <h1>Create New Job</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <!-- <img src="../../../assets/icons8-account-50.png"> -->
+      <mat-form-field class="jname">
+        <input [(ngModel)]="jobTitle" matInput placeholder="Job Title" required> 
+      </mat-form-field> 
+      <mat-form-field class="cname">
+          <input [(ngModel)]="companyName" matInput placeholder="Company Name" required>
+        </mat-form-field>
+      <br>
+      <mat-form-field  class="description"> 
+        <textarea rows="10" [(ngModel)]="jobDescription" matInput placeholder="Job Description" required></textarea>
+      </mat-form-field>
+      <br>
+     
+      <br>
+      <mat-form-field class="site">
+        <input [(ngModel)]="employeerID" matInput placeholder="Company Website" required>
+      </mat-form-field>
+  
+      <mat-form-field class="select">
+          <mat-select [(ngModel)]="jobType"  matSelect placeholder="Job Type"required>
+            <mat-option value="fulltime">Full Time</mat-option>
+            <mat-option value="parttime">Part Time</mat-option>
+            <mat-option value="contract">Contract</mat-option>
+          </mat-select>
+        </mat-form-field>
+      <br>
+      <mat-form-field class="address">
+        <input [(ngModel)]="companyAddress" matInput placeholder="Company Address" required>
+      </mat-form-field>
+      <button mat-raised-button>Update</button>
+      <button mat-raised-button>Delete</button>
+      <br>
+     
+    </mat-card-content>
+  
+  </div>
