@@ -30,6 +30,14 @@ this.modal = true
   ngOnInit() {
     this.data.getEmployerJobs().subscribe((res:any) => console.log(this.jobs = res.jobs))
 }
+openDetails(){
+  this.dialog.open(DetailsComponent);
+  
+}
+
+openUpdate(){
+  this.dialog.open(UpdateComponent);
+}
 
  }
 
