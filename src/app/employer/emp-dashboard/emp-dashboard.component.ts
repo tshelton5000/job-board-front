@@ -28,8 +28,7 @@ this.modal = true
 
 
   ngOnInit() {
-  //   this.data.getJobs().subscribe(
-  //  (res: any) => console.log((this.jobs = res.jobs)));
+    this.data.getEmployerJobs().subscribe((res:any) => console.log(this.jobs = res.jobs))
 }
 
  }
