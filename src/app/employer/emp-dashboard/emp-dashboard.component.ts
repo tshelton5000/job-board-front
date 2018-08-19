@@ -27,8 +27,8 @@ this.modal = true
  constructor(private data: DataService, public dialog: MatDialog){ }
 
 
-  ngOnInit() {this.data.getJobs().subscribe(
-   (res: any) => console.log((this.jobs = res.jobs)));
+  ngOnInit() {
+    this.data.getEmployerJobs().subscribe((res:any) => console.log(this.jobs = res.jobs))
 }
 
  }
