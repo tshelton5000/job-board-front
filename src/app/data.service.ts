@@ -30,8 +30,10 @@ export class DataService {
   getEmployerJobs(){
     // console.log(this.auth.userObject)
     return this.http.get(`${url}/job/all/${this.auth.userObject.id}`)
- 
-    
+  }
+
+  getOneJob(){
+    return this.http.get(`${url}/job/`)
   }
   }
 
