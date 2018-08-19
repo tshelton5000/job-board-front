@@ -11,17 +11,22 @@ export class EmpDashboardComponent implements OnInit {
 
   // jobs$: any;
   modal: boolean = false;
-  jobs: any;
-
+  jobs$: any;
+  id: any;
 OpenModal(){
 this.modal = true
 }
 
  constructor(private data: DataService){ }
 
-  ngOnInit() {this.data.getJobs().subscribe(
-   (res: any) => console.log((this.jobs = res.jobs)));
+  ngOnInit() {
+    
+    this.data.getJobs().subscribe(
+   (res:any) => console.log((this.jobs$ = (res.jobs))));
+  //  this.data.getEmployer(this.id).subscribe((res:any) => this.id = res.jobs.EmployerId);
+    
 }
+
 
  }
 

@@ -9,20 +9,21 @@ import { DataService } from '../../../data.service';
 })
 export class JobsCreateComponent implements OnInit {
   job = {
-  jobTitle:'',
-  jobDescription:'',
-  companyName:'',
-  employeerID:'',
-  companySite:'',
-  companyAddress:'',
-  jobType:''
+  job_title:'',
+  job_description:'',
+  company_name:'',
+  EmployeerID:'',
+  company_site:'',
+  company_address:'',
+  job_type:''
 } 
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
   }
-  // createNewJob(){
-  //   this.data.createJobs(this.job).subscribe(console.log(this.job))
-  // }
+  createNewJob(){
+    this.data.createJobs(this.job).subscribe(
+      res => console.log(res));
+  }
 }

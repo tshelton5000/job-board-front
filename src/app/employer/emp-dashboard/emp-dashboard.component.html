@@ -5,17 +5,17 @@
 <div class = "allJobs">
  
 <section class="jobscon">
-  <mat-card class= "eachJob" *ngFor="let job of jobs">
+  <mat-card class= "eachJob">
     <div class="cool">
-    <mat-card-title><mat-checkbox class="Mname">{{job.job_title}}</mat-checkbox></mat-card-title>
+    <mat-card-title><mat-checkbox class="Mname">{{job_title}}</mat-checkbox></mat-card-title>
     
 
     
-      <mat-card-subtitle class="Cname">{{job.company_name}}</mat-card-subtitle>
+      <mat-card-subtitle class="Cname">{{company_name}}</mat-card-subtitle>
 
   </div>
 
-      <mat-card-content><p>{{job.job_description}}</p></mat-card-content>
+      <mat-card-content><p>{{job_description}}</p></mat-card-content>
 
 
 
@@ -34,3 +34,4 @@
   <app-job-details *ngIf = "modal"></app-job-details>
 </div>
   
+<!-- *ngFor="let job of jobs" line 8-->
