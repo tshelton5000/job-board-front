@@ -10,11 +10,15 @@ import { Router } from "@angular/router";
 export class LoginComponent implements OnInit {
   email: string = '';
   password: string = '';
-  token: any
+  token: any;
+  err: any;
 
   constructor(public authService: AuthService, private _router: Router) { }
 
  handleSubmite(){
+  if (this.email === "" || this.password === "" ){
+    alert("Please fill out all required fields")
+  }else{
    this.authService.logine(this.email, this.password)
    .subscribe((res: any) => { 
       console.log(res)
@@ -23,6 +27,7 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('token', this.token)
       this._router.navigate(['/jobposts'])
   },
+
   err => console.log(err)   
    )
 }
@@ -35,7 +40,14 @@ studentHandleSubmit(){
   err => console.log(err)
    )}
 
+  err => alert("Email or Password is incorrect")
+   )}}
+
+
    handleSubmits(){
+     if (this.email === "" || this.password === "" ){
+       alert("Please fill out all required fields")
+     }else{
     this.authService.logins(this.email, this.password)
     .subscribe((res: any) => { 
       console.log(res)
@@ -44,8 +56,8 @@ studentHandleSubmit(){
       sessionStorage.setItem('token', this.token)
       this._router.navigate(['/jobposts'])
    },
-   err => console.log(err)
-    )}
+   err => alert("Email or Password is incorrect")
+    )}}
 
   ngOnInit() {
   }
