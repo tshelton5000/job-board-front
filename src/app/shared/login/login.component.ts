@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../auth.service';
-import { RouterLink } from '../../../../node_modules/@angular/router';
+import { RouterLink } from '@angular/router';
 import { Router } from "@angular/router"; 
 @Component({
   selector: 'app-login',
@@ -17,10 +17,11 @@ export class LoginComponent implements OnInit {
  handleSubmite(){
    this.authService.logine(this.email, this.password)
    .subscribe((res: any) => { 
-    this.token = res.sessionToken
-    sessionStorage.setItem('token', this.token)
-    this._router.navigate(['/employer'])
-  console.log(this.token)
+      console.log(res)
+      this.authService.userObject = res.employer;
+      this.token = res.sessionToken
+      sessionStorage.setItem('token', this.token)
+      this._router.navigate(['/jobposts'])
   },
   err => console.log(err)   
    )
@@ -37,24 +38,16 @@ studentHandleSubmit(){
    handleSubmits(){
     this.authService.logins(this.email, this.password)
     .subscribe((res: any) => { 
-     this.token = res.sessionToken
-     sessionStorage.setItem('token', this.token)
-     this._router.navigate(['/jobposts'])
-   console.log(this.token)
+      console.log(res)
+      this.authService.userObject = res.student;
+      this.token = res.sessionToken
+      sessionStorage.setItem('token', this.token)
+      this._router.navigate(['/jobposts'])
    },
    err => console.log(err)
     )}
 
-
-
-
   ngOnInit() {
   }
-
-  // login(){
-  //   this.authService.login(this.email, this.password, this.role).subscribe(
-  //     res =>
-  //   )
-  // }
 
 }
