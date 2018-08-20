@@ -5,46 +5,40 @@
     <hr>
     <div class="content">
         <mat-form-field class="example-full-width">
-            <mat-label></mat-label>
-            <input matInput placeholder="Placeholder">
+            <mat-label>First Name</mat-label>
+            <input matInput [(ngModel)]="userObj.first_name" placeholder="{{userObj.first_name}}">
         </mat-form-field>
     </div>
     <div class="content">
         <mat-form-field class="example-full-width">
-            <mat-label>Fill form field</mat-label>
-            <input matInput placeholder="Placeholder">
+            <mat-label>Last Name</mat-label>
+            <input matInput [(ngModel)]="userObj.last_name" placeholder="{{userObj.last_name}}">
+        </mat-form-field>
+    </div>
+    <div class="content" *ngIf="!userInfo.isStudent()">
+        <mat-form-field class="example-full-width">
+            <mat-label>Company Name</mat-label>
+            <input matInput [(ngModel)]="userObj.company_name" placeholder="{{userObj.company_name}}">
+        </mat-form-field>
+    </div>
+    <div class="content" *ngIf="userInfo.isStudent()">
+        <mat-form-field class="example-full-width">
+            <mat-label>Resume url</mat-label>
+            <input matInput [(ngModel)]="userObj.resume" placeholder="{{userObj.resume}}">
         </mat-form-field>
     </div>
     <div class="content">
         <mat-form-field class="example-full-width">
-            <mat-label>Fill form field</mat-label>
-            <input matInput placeholder="Placeholder">
+            <mat-label>New Password</mat-label>
+            <input matInput [(ngModel)]="userObj.password" placeholder="{{userObj.password}}">
         </mat-form-field>
     </div>
     <div class="content">
         <mat-form-field class="example-full-width">
-            <mat-label>Fill form field</mat-label>
-            <input matInput placeholder="Placeholder">
+            <mat-label>Confirm New Password</mat-label>
+            <input matInput [(ngModel)]="userObj.confirmPass" placeholder="{{userObj.confirmPass}}">
         </mat-form-field>
     </div>
-    <div class="content">
-        <mat-form-field class="example-full-width">
-            <mat-label>Fill form field</mat-label>
-            <input matInput placeholder="Placeholder">
-        </mat-form-field>
-    </div>
-    <div class="content">
-        <mat-form-field class="example-full-width">
-            <mat-label>Fill form field</mat-label>
-            <input matInput placeholder="Placeholder">
-        </mat-form-field>
-    </div>
-    <div class="content">
-        <mat-form-field class="example-full-width">
-            <mat-label>Fill form field</mat-label>
-            <input matInput placeholder="Placeholder">
-        </mat-form-field>
-    </div>
-    <button mat-raised-button class="btn btn-danger pull-right" ng-click="addField()">Add Field</button>
-    <button mat-raised-button type="submit" class="btn btn-danger pull-right">Delete Profile</button>
+    <button mat-raised-button class="btn btn-danger pull-right" (click)="updateProfile()">Update</button>
+    <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="removeUser()">Delete Account</button>
 </div>
