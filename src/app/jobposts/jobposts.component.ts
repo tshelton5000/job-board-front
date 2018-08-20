@@ -5,7 +5,7 @@ import {MatDialog} from '@angular/material';
 @Component({
   selector: 'app-jobposts',
   templateUrl: './jobposts.component.html',
-  styleUrls: ['./jobposts.component.scss']
+  styleUrls: ['./jobposts.component.css']
 })
 export class JobpostsComponent implements OnInit {
 jobs: any;
