@@ -19,24 +19,27 @@ export class EmpDashboardComponent implements OnInit {
   // jobs$: any;
   modal: boolean = false;
   jobs: any;
-
+ 
 OpenModal(){
 this.modal = true
 }
 
  constructor(private data: DataService, public dialog: MatDialog){ }
 
-
+ 
   ngOnInit() {
+    
     this.data.getEmployerJobs().subscribe((res:any) => console.log(this.jobs = res.jobs))
 }
-openDetails(){
-  this.dialog.open(DetailsComponent);
-  
-}
+
 
 openUpdate(){
   this.dialog.open(UpdateComponent);
+}
+
+openDetails(){
+  this.dialog.open(DetailsComponent);
+  
 }
 
  }
