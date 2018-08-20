@@ -6,7 +6,7 @@ import {MatDialog} from '@angular/material';
 import { DetailsComponent } from './details/details.component';
 import { UpdateComponent } from './update/update.component';
 
-import { Observable } from 'rxjs/Observable'; 
+import { Observable } from 'rxjs'; 
 import { Jobs } from '../../models/jobs';
 
 @Component({
@@ -46,4 +46,3 @@ openDetails(){
 
 
 //  data => (console.log(this.jobs = data)));
-
