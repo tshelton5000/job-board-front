@@ -17,6 +17,14 @@ export class NavBarComponent implements OnInit {
       return false;
     }
   }
+
+  showStudentDash(){
+    if(sessionStorage.token && !this.auth.isEmployer()){
+      return true;
+    } else {
+      return false;
+    }
+  }
   
   showProfileButton(){
     if (sessionStorage.token){

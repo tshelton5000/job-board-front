@@ -2,7 +2,7 @@
 <mat-toolbar-row>
     <button mat-flat-button class="logobutton" routerLink='/' > <img class="logo" src="https://efa-lms-e8982.firebaseapp.com/assets/eleven-fifty-white.png">  </button>
     <span class="spacer"></span>
-    <button mat-button routerLink='/jobposts' *ngIf="showNavButton()">All Jobs </button>
+    <button mat-button routerLink='/jobposts' *ngIf="showStudentDash()">Student Dashboard</button>
     <button mat-button routerLink='/employer' *ngIf="showEmpDash()" >Emp Dashboard</button>
     <button mat-button routerLink='/profile'*ngIf="showProfileButton()" >Profile</button>
     <button mat-button *ngIf="showLogoutButton()" (click)="logout()">Logout</button>

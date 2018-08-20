@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscriber } from '../../../../../node_modules/rxjs';
 import { DataService } from '../../../data.service';
-import { Jobs } from '../../models/jobs';
+
 
 @Component({
   selector: 'app-jobs-create',
