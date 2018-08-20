@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { Jobs } from './models/jobs';
+import { AuthService } from './auth.service';
+
 
 
 const url = "http://localhost:3000"
@@ -13,7 +15,7 @@ export class DataService {
   token: string = sessionStorage.getItem('token')
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private auth: AuthService) { }
 
   getToken() {
     return sessionStorage.getItem('token')
@@ -21,17 +23,16 @@ export class DataService {
   getJobs(){
     return this.http.get(`${url}/job`)
   }
-  createJobs(jobs: Jobs){
-    return this.http.post(`${url}/job/create`, jobs)
+  createJobs(job){
+    return this.http.post(`${url}/job/create`, {job: {job_title: job.job_title, job_description: job.job_description, company_name: job.company_name, company_address:job.company_address, company_site:job.company_site, job_type:job.job_type, employerID: job.employerID }}
+    )}
+
+  getEmployerJobs(){
+    console.log(this.auth.userObject)
+    return this.http.get(`${url}/job/all/${this.auth.userObject.id}`)
   }
-  // getUsers() {
-  //   return this.http.get('https://jsonplaceholder.typicode.com/users')
-  // }
-  // getUser(){
-  //   if(user==="student"){
-  //   return this.http.get("http://localhost:3000/student/:id")
-  // } else {
-  //   return this.http.get("http://localhost:3000/employer/:id")
-  
-  // }
-}
+
+  getOneJob(){
+    return this.http.get(`${url}/job/`)
+  }
+  }

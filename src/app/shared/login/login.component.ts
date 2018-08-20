@@ -23,15 +23,6 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('token', this.token)
       this._router.navigate(['/jobposts'])
   },
-  err => console.log(err)   
-   )
-}
-
-studentHandleSubmit(){
-    this.authService.logins(this.email, this.password)
-    .subscribe(res => {sessionStorage.setItem('sessionToken', this.token)
-    this._router.navigate(['/jobposts'])
-  },
   err => console.log(err)
    )}
 
