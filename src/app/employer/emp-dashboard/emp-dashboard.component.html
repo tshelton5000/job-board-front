@@ -5,7 +5,7 @@
 <div class = "allJobs">
  
 <section class="jobscon">
-  <mat-card class= "eachJob" *ngFor="let job of jobs$">
+  <mat-card class= "eachJob" *ngFor="let job of jobs">
     <div class="cool">
     <mat-card-title><mat-checkbox class="Mname">{{job.job_title}}</mat-checkbox></mat-card-title>
     
@@ -20,8 +20,8 @@
 
 
     <mat-card-actions>
-      <button mat-raised-button class="butt"(click)="Update">Update</button>
-      <button mat-raised-button class="butt" (click)="OpenModal()">Details</button>
+      <button mat-raised-button class="butt"(click)="openUpdate()">Update</button>
+      <button mat-raised-button class="butt" (click)="openDetails()">Details</button>
     </mat-card-actions>
 
 
