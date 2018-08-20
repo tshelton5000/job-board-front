@@ -13,8 +13,10 @@ const url = "http://localhost:3000"
 
 export class DataService {
   token: string = sessionStorage.getItem('token')
-
-
+  job: any;
+  jobId: number;
+  
+ 
   constructor(private http: HttpClient, private auth: AuthService) { }
 
   getToken() {
@@ -32,7 +34,15 @@ export class DataService {
     return this.http.get(`${url}/job/all/${this.auth.userObject.id}`)
   }
 
-  getOneJob(){
-    return this.http.get(`${url}/job/`)
+  getJobById(id){
+    return this.http.get(`${url}/job/${id}`)
   }
+ 
+  retrieveJobId(){
+    return this.jobId;
   }
+
+getJobId(number){
+  this.jobId = number
+  }
+}
