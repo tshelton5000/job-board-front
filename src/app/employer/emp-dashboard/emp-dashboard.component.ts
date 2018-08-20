@@ -1,11 +1,8 @@
 import { Component, OnInit, } from '@angular/core';
 import { DataService } from '../../data.service';
-
-
 import {MatDialog} from '@angular/material';
 import { DetailsComponent } from './details/details.component';
 import { UpdateComponent } from './update/update.component';
-
 import { Observable } from 'rxjs'; 
 import { Jobs } from '../../models/jobs';
 
