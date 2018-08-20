@@ -27,8 +27,12 @@ this.modal = true
  constructor(private data: DataService, public dialog: MatDialog){ }
 
 
-  ngOnInit() {this.data.getJobs().subscribe(
-   (res: any) => console.log((this.jobs = res.jobs)));
+  ngOnInit() {
+    this.data.getEmpJobs()
+      .subscribe((res:any) => {
+        this.jobs = res.jobs;
+        console.log(this.jobs);
+      })
 }
 
 openDetails(){
@@ -36,12 +40,11 @@ openDetails(){
   
 }
 
-openUpdate(){
+openUpdate(jobId){
   this.dialog.open(UpdateComponent);
+  console.log(jobId);
+  this.data.storeEmpJobId(jobId);
 }
 
  }
-
-
-//  data => (console.log(this.jobs = data)));
 
