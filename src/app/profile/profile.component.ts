@@ -67,4 +67,5 @@ export class ProfileComponent implements OnInit {
     company_name:'',
     email:''
     }
+
 }
