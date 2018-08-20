@@ -1,16 +1,29 @@
 .container{
+    padding: 2vw;
+    
+    
+    margin: auto;
+    width: 20%;
     text-align: center;
-    display: block;
-    position: relative;
-    width:100%;
-    margin:100px auto;
+   
 }
-hr{
-    padding: 0;
-    border: none;
-    border-top: 3px solid black;
-    text-align: center;
-    margin: 10px auto;
-    width: 200px;
-    height: 0px;
+
+
+
+
+.bodyyyy{
+    
+    background-color: rgb(144, 105, 180,0);
+         
+    display: grid;
+       
+    padding: 7vw;
+    
+ }
+
+.butt{
+    background-color: #E24A52 !important;
+    margin: 1vw;
+    padding: .2vw;
+    color:white;
 }

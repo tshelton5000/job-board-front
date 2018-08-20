@@ -1,13 +1,4 @@
-.allJobs{
-    background-color: rgb(144, 105, 180,0);
-    
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding:0vw 0vw 0vw 2.5vw;
 
-
-    
-}
 p{
     font-family: 'Roboto', sans-serif;   
 }
@@ -16,7 +7,7 @@ h1{
     font-family: 'Roboto', sans-serif;
 }
 .title{
-    padding:.5vw 0vw 0vw 2.5vw;
+    font-family: 'Roboto', sans-serif; 
     
 }
 .Mname{
@@ -27,7 +18,6 @@ h1{
 .jobscon{
     overflow: auto;
     width: 24.5vw;
-    
     height: 80vh;
     
     
@@ -45,6 +35,11 @@ h1{
     height: 50px;
     
 }
+li{
+    font-family: 'Roboto', sans-serif; 
+   
+    color: gray !important;  
+}
 .Cname{
     font-family: 'Roboto', sans-serif; 
    
@@ -58,7 +53,7 @@ h1{
 
 .eachJob{
  max-width: 400px;
- height: 200px;
+ height: 18vw;
  
  
  background-color: white;

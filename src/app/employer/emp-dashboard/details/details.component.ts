@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material';
-import { DataService } from '../../../data.service'
+import { DataService } from '../../../data.service';
+
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',

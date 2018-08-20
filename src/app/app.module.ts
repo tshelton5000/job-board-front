@@ -18,6 +18,7 @@ import { UpdateComponent } from './employer/emp-dashboard/update/update.componen
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './token.interceptor';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -38,7 +39,7 @@ import { TokenInterceptor } from './token.interceptor';
     StudentModule,
     EmployerModule,
     HttpClientModule,
-
+    MatListModule,
     MatDialogModule,
     
     

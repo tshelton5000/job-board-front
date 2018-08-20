@@ -14,13 +14,13 @@
 
     <br>
     <mat-form-field  class="description"> 
-      <textarea rows="10" [(ngModel)]="job.job_description" matInput placeholder="Job Description" required></textarea>
+      <textarea rows="10" maxlength="250" [(ngModel)]="job.job_description" matInput placeholder="Job Description 250 Characters" required></textarea>
     </mat-form-field>
     <br>
    
     <br>
     <mat-form-field class="site">
-      <input [(ngModel)]="job.employeerID" matInput placeholder="Company Website" required>
+      <input [(ngModel)]="job.company_site" matInput placeholder="Company Website" required>
     </mat-form-field>
 
     <mat-form-field class="select">
