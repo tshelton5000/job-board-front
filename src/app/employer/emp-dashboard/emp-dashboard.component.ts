@@ -45,4 +45,3 @@ openDetails(){
  }
 
 
-//  data => (console.log(this.jobs = data)));
