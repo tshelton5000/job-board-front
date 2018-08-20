@@ -17,6 +17,29 @@ export class NavBarComponent implements OnInit {
       return false;
     }
   }
+  
+  showProfileButton(){
+    if (sessionStorage.token){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  showNavButton(){
+    if (sessionStorage.token){
+      return true;
+    } else {
+      return false;
+    }
+  }
+  showLogoutButton(){
+    if (sessionStorage.token){
+      return true;
+    } else {
+      return false;
+    }
+  }
   logout (){
     this.auth.logout()
   }
