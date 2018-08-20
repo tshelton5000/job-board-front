@@ -12,12 +12,15 @@ jobs: any;
 
  constructor(private data: DataService, public dialog: MatDialog){ }
 
+ openDetails(number){
+  this.dialog.open(DetailsComponent);
+  this.data.getJobId(number)
+}
   ngOnInit() {
-     this.data.getJobs().subscribe((res:any)=>console.log(this.jobs = res.jobs))
+    
+     this.data.getJobs().subscribe((res: any)=>console.log(this.jobs = (res.jobs)))
+     
     }
-    openDetails(){
-      this.dialog.open(DetailsComponent);
-      
-    }
+   
   }
 
