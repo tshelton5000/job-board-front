@@ -31,13 +31,13 @@
     <div class="content">
         <mat-form-field class="example-full-width">
             <mat-label>New Password</mat-label>
-            <input matInput [(ngModel)]="userObj.password" placeholder="{{userObj.password}}">
+            <input matInput [(ngModel)]="userObj.password" placeholder="{{userObj.password}}" type="password">
         </mat-form-field>
     </div>
     <div class="content">
         <mat-form-field class="example-full-width">
             <mat-label>Confirm New Password</mat-label>
-            <input matInput [(ngModel)]="userObj.confirmPass" placeholder="{{userObj.confirmPass}}">
+            <input matInput [(ngModel)]="userObj.confirmPass" placeholder="{{userObj.confirmPass}}" type="password">
         </mat-form-field>
     </div>
     <button mat-raised-button class="butt" (click)="updateProfile()">Update</button>

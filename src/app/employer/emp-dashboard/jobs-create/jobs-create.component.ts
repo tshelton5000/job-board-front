@@ -24,9 +24,7 @@ export class JobsCreateComponent implements OnInit {
       alert("Please fill in the required fields")
     }else{
     this.data.createJobs(this.job).subscribe((res:any) => console.log(this.job = res.job))
-    //window.location.reload();
  }}
   ngOnInit() {
-    this.data.getEmployerJobs().subscribe((res:any) => console.log(res))
   }
 }

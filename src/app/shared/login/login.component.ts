@@ -33,18 +33,6 @@ export class LoginComponent {
 }
  }
 
-// studentHandleSubmit(){
-//     this.authService.logins(this.email, this.password)
-//     .subscribe(res => {sessionStorage.setItem('sessionToken', this.token)
-//     this._router.navigate(['/jobposts'])
-//   },
-//   err => console.log(err)
-//    )}
-
-//   err => alert("Email or Password is incorrect")
-//    )}}
-
-
    handleSubmits(){
      if (this.email === "" || this.password === "" ){
        alert("Please fill out all required fields")

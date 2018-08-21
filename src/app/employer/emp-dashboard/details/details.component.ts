@@ -12,18 +12,28 @@ import { JobpostsComponent } from '../../../jobposts/jobposts.component';
 })
 export class DetailsComponent implements OnInit {
   jobId: any;
-  jobs: any;
+  job = {
+    job_title: '',
+    company_name: '',
+    job_description:'',
+    company_address: '',
+    job_type: ''
+  };
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, private dataService: DataService) { }
-
 
   ngOnInit() {
       this.jobId=this.dataService.retrieveJobId();
       console.log(this.jobId)
-      this.dataService.getJobById(this.jobId).subscribe((res:any)=> console.log(this.jobs = res))
-    }
-
+      
+      this.dataService.getJobById(this.jobId)
+      .subscribe((res:any)=> {
+        this.job = res.id;
+        console.log(this.job);
+      })
   }
+
+}
 
  
 

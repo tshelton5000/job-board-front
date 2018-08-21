@@ -27,6 +27,7 @@ export class SignupComponent implements OnInit {
       alert("Please make sure Passwords match")
     }else{
     this.authService.signupe(this.user).subscribe((res: any) => { 
+      this.authService.userObject = res.employer;
       this.token = res.sessionToken
       sessionStorage.setItem('token', this.token)
       this._router.navigate(['/employer'])
@@ -39,6 +40,7 @@ export class SignupComponent implements OnInit {
       alert("Please make sure Passwords match")
     }else{
     this.authService.signups(this.user).subscribe ( (res: any) => {
+      this.authService.userObject = res.student;
       this.token = res.sessionToken
       sessionStorage.setItem('token', this.token)
       this._router.navigate(['/jobposts'])
