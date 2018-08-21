@@ -20,10 +20,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './token.interceptor';
 import { MatListModule } from '@angular/material/list';
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
