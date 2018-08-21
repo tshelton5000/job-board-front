@@ -1,45 +1,25 @@
-
 <div class="title">
-    <h1>Employer Dashboard</h1>
-    </div>
-<div class = "allJobs">
- 
-<section class="jobscon">
-  <mat-card class= "eachJob" *ngFor="let job of jobs">
-    <div class="cool">
-    <mat-card-title><mat-checkbox class="Mname">{{job.job_title}}</mat-checkbox></mat-card-title>
-    
-    
-    
-      <mat-card-subtitle class="Cname">{{job.company_name}}</mat-card-subtitle>
-
-  </div>
-
-      <mat-card-content><p class="description">{{job.job_description | limitWord : 150 : '...'}}</p></mat-card-content>
-
-
-
-
-    <mat-card-actions>
-<<<<<<< HEAD
-      
-      <button mat-raised-button class="butt"(click)="openUpdate()">Update</button>
-=======
-      <button mat-raised-button class="butt"(click)="openUpdate(job.id)">Update</button>
-      
-
->>>>>>> ffe83c12443e71a4c18e0997a3c89893cb424a94
-     
-
-    </mat-card-actions>
-
-
-  </mat-card>
-</section>
-  
-  <section class = "createJob">
-  <app-jobs-create></app-jobs-create>
-  </section>
-  <app-job-details *ngIf = "modal"></app-job-details>
+  <h1>Employer Dashboard</h1>
 </div>
-  
+<div class="allJobs">
+  <section class="jobscon">
+    <mat-card class="eachJob" *ngFor="let job of jobs">
+      <div class="cool">
+        <mat-card-title>
+          <mat-checkbox class="Mname">{{job.job_title}}</mat-checkbox>
+        </mat-card-title>
+        <mat-card-subtitle class="Cname">{{job.company_name}}</mat-card-subtitle>
+      </div>
+      <mat-card-content>
+        <p class="description">{{job.job_description | limitWord : 150 : '...'}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button class="butt" (click)="openUpdate(job.id)">Update</button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+  <section class="createJob">
+    <app-jobs-create></app-jobs-create>
+  </section>
+  <app-job-details *ngIf="modal"></app-job-details>
+</div>

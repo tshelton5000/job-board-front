@@ -29,5 +29,6 @@ export class JobsCreateComponent implements OnInit {
  }}
   ngOnInit() {
     this.data.getEmpJobs().subscribe((res:any) => console.log(res))
+ 
   }
 }

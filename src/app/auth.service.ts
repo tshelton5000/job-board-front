@@ -44,11 +44,18 @@ export class AuthService {
     }
   }
 
+
+
+  // storeUserObject(
+  // }
+
+
+
   constructor(private http: HttpClient, private _router: Router) { }
 
-  getToken() {
-    return localStorage.getItem('token')
-  }
+  // getToken() {
+  //   return localStorage.getItem('token')
+  // }
 
   logine(email: string, password: string) {
     return this.http.post(`http://localhost:3000/employer/signin`, {employer: {email: email, password: password}} )

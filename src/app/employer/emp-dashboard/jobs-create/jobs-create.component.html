@@ -35,7 +35,7 @@
       <input [(ngModel)]="job.company_address" matInput placeholder="Company Address" required>
     </mat-form-field>
 
-    <button mat-raised-button (click)='createNewJob()'>Submit</button>
+    <button mat-raised-button (click)='createNewJob && ngOnInit()'>Submit</button>
     <br>
    
   </mat-card-content>

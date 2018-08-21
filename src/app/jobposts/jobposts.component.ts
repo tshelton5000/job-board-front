@@ -10,15 +10,20 @@ import {MatDialog} from '@angular/material';
 })
 export class JobpostsComponent implements OnInit {
 
-jobs:any;
+  jobs: any;
+
+
+
 
  constructor(private data: DataService, public dialog: MatDialog){ }
 
   ngOnInit() {
-     this.data.getJobs().subscribe((res:any)=>console.log(this.jobs=res.jobs))
+     this.data.getJobs().subscribe((res:any)=> {this.jobs = res.jobs})
+
     }
     openDetails(number){
       this.dialog.open(DetailsComponent);
       this.data.getJobId(number)
      }
+
 }

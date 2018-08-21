@@ -1,52 +1,24 @@
 <div class="title">
   <h1>Jobs Available Now</h1>
-  </div>
-<div class = "allJobs">
-
-
-
-
-<section class="jobscon">
-<mat-card class= "eachJob" *ngFor="let job of jobs">
-  <div class="cool">
-  <mat-card-title><mat-checkbox class="Mname">{{job.job_title}}</mat-checkbox></mat-card-title>
-
-  
-
-  
-    <mat-card-subtitle class="Cname">{{job.company_name}}</mat-card-subtitle>
-
-</div>
-
-    <mat-card-content><p>{{job.job_description}}</p></mat-card-content>
-
-
-
-  <mat-card-actions>
-    
-    <button mat-raised-button class="butt" (click)="openDetails()">Details</button>
-  </mat-card-actions>
-
-
-</mat-card>
-</section>
-
-<section class = "createJob">
-
-
-    <mat-card-subtitle class="Cname">{{job.company_name}}</mat-card-subtitle>
-
-
-
-    <mat-card-content class="Bdes"><p class="description">{{job.job_description}}</p></mat-card-content>
-
-  <mat-card-actions>
-    <button mat-raised-button class="butt" (click)="openDetails(job.id)">Details</button>
-  </mat-card-actions>
-</mat-card>
-</section>
-<section class = "createJob">
-
-</section>
-<app-job-details *ngIf = "modal"></app-job-details>
-</div>
+ </div>
+ <div class="allJobs">
+  <section class="jobscon">
+    <mat-card class="eachJob" *ngFor="let job of jobs">
+      <div class="cool">
+        <mat-card-title>
+          <mat-checkbox class="Mname">{{job.job_title}}</mat-checkbox>
+        </mat-card-title>
+        <mat-card-subtitle class="Cname">{{job.company_name}}</mat-card-subtitle>
+      </div>
+      <mat-card-content class="Bdes">
+        <p class="description">{{job.job_description}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button class="butt" (click)="openDetails(job.id)">Details</button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+  <section class="createJob">
+ </section>
+ <app-job-details *ngIf="modal"></app-job-details>
+ </div>

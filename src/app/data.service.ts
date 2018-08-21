@@ -31,6 +31,12 @@ export class DataService {
   }
   getJobs(){
     return this.http.get(`${url}/job`)
+    // .subscribe((res:any)=>{
+    //   this.job = res.jobs
+    }
+  
+  storeJobs(){
+    sessionStorage.setItem('jobs', this.job)
   }
   createJobs(job){
     return this.http.post(`${url}/job/create`, {job: {job_title: job.job_title, job_description: job.job_description, company_name: job.company_name, company_address:job.company_address, company_site:job.company_site, job_type:job.job_type, employerID: job.employerID }})
@@ -39,7 +45,6 @@ export class DataService {
     return this.http.put(`${url}/job/update/${this.empJobId}`, {job: {job_title: job.job_title, job_description: job.job_description, job_type: job.job_type, company_name:job.company_name, company_site:job.company_website, company_address:job.company_address}})
   }
   getEmpJobs(){
-    console.log(this.authService.userObject);
     return this.http.get(`${url}/job/all/${this.authService.userObject.id}`)
   }
 
@@ -75,4 +80,5 @@ getJobId(number){
   this.jobId = number
 
   }
+  
 }

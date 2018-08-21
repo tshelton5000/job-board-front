@@ -26,7 +26,8 @@ this.modal = true
  
   ngOnInit() {
     
-    this.data.getEmpJobs().subscribe((res:any) => console.log(this.jobs = res.jobs))
+    this.data.getEmpJobs().subscribe((res:any) => {this.jobs =res.jobs})
+    sessionStorage.setItem('jobs', this.jobs)
 }
 
 
