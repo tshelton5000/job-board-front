@@ -26,6 +26,5 @@ jobs:any;
  openDetails(number){
   this.dialog.open(DetailsComponent);
   this.data.getJobId(number)
+  }
 }
-}
-

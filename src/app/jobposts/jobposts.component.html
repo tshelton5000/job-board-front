@@ -11,7 +11,7 @@
         <mat-card-subtitle class="Cname">{{job.company_name}}</mat-card-subtitle>
       </div>
       <mat-card-content class="Bdes">
-        <p class="description">{{job.job_description}}</p>
+        <p class="description">{{job.job_description | limitWord2 : 150 : '...'}}</p>
       </mat-card-content>
       <mat-card-actions>
         <button mat-raised-button class="butt" (click)="openDetails(job.id)">Details</button>
