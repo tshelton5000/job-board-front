@@ -22,7 +22,6 @@ import { ProfileComponent } from '../profile/profile.component';
     
     exports: [JobDetailsComponent, FooterComponent],
 
-
     declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent, JobDetailsComponent, FooterComponent, ProfileComponent]
 })
 

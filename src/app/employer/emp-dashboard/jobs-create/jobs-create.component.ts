@@ -28,6 +28,6 @@ export class JobsCreateComponent implements OnInit {
     //window.location.reload();
  }}
   ngOnInit() {
-    this.data.getEmployerJobs().subscribe((res:any) => console.log(res))
+    this.data.getEmpJobs().subscribe((res:any) => console.log(res))
   }
 }

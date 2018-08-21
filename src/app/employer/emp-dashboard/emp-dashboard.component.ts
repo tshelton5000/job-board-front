@@ -13,7 +13,7 @@ import { Jobs } from '../../models/jobs';
 })
 export class EmpDashboardComponent implements OnInit {
 
-  // jobs$: any;
+ 
   modal: boolean = false;
   jobs: any;
  
@@ -26,19 +26,22 @@ this.modal = true
  
   ngOnInit() {
     
-    this.data.getEmployerJobs().subscribe((res:any) => console.log(this.jobs = res.jobs))
+    this.data.getEmpJobs().subscribe((res:any) => console.log(this.jobs = res.jobs))
 }
 
-
-openUpdate(){
-  this.dialog.open(UpdateComponent);
-}
 
 openDetails(){
   this.dialog.open(DetailsComponent);
   
 }
 
+openUpdate(jobId){
+  this.dialog.open(UpdateComponent);
+  console.log(jobId);
+  this.data.storeEmpJobId(jobId);
+}
+
  }
 
+ 
 

@@ -2,25 +2,23 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { DetailsComponent } from '../employer/emp-dashboard/details/details.component';
 import {MatDialog} from '@angular/material';
+
 @Component({
   selector: 'app-jobposts',
   templateUrl: './jobposts.component.html',
   styleUrls: ['./jobposts.component.css']
 })
 export class JobpostsComponent implements OnInit {
-jobs: any;
+
+jobs:any;
 
  constructor(private data: DataService, public dialog: MatDialog){ }
 
- openDetails(number){
-  this.dialog.open(DetailsComponent);
-  this.data.getJobId(number)
-}
   ngOnInit() {
-    
-     this.data.getJobs().subscribe((res: any)=>console.log(this.jobs = (res.jobs)))
-     
+     this.data.getJobs().subscribe((res:any)=>console.log(this.jobs=res.jobs))
     }
-   
-  }
-
+    openDetails(number){
+      this.dialog.open(DetailsComponent);
+      this.data.getJobId(number)
+     }
+}
