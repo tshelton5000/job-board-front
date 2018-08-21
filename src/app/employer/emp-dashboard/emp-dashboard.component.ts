@@ -30,14 +30,6 @@ this.modal = true
 }
 
 
-  ngOnInit() {
-    this.data.getEmpJobs()
-      .subscribe((res:any) => {
-        this.jobs = res.jobs;
-        console.log(this.jobs);
-      })
-
-
 
 
 openDetails(){
@@ -50,8 +42,6 @@ openUpdate(jobId){
   console.log(jobId);
   this.data.storeEmpJobId(jobId);
 }
-
- }
 
  }
 
