@@ -52,10 +52,29 @@ li{
 
 
 .eachJob{
- max-width: 400px;
+ width: 25vw;
  height: 18vw;
  
  
  background-color: white;
  margin: .5vw 0vw;
 };
+.Bdes{
+    word-wrap: break-word;
+   
+    
+   
+}
+.description{
+   
+    width: 100%;
+   
+    text-align: justify;
+   
+}
+
+.bottom{
+    
+    height: 5vw;
+    word-wrap: break-word;
+}

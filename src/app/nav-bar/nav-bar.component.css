@@ -6,10 +6,13 @@ mat-toolbar{
 }
 
 .logo{
-    width: 11.5vw;
+    width: 12.6vw;
 }
 
 .logobutton{
  background-color: #E24A52 !important;
  padding:0vw 2vw;
+}
+button{
+    padding:1px;
 }
