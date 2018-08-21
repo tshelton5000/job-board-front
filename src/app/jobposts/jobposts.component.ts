@@ -11,6 +11,8 @@ import { MatDialog } from '@angular/material';
 })
 export class JobpostsComponent implements OnInit {
 
+  myModel = true;  
+
 jobs:any;
 
  constructor(private data: DataService, public dialog: MatDialog){ }

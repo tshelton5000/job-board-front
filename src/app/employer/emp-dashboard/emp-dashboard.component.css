@@ -47,7 +47,7 @@ h1{
     color: gray !important;
 }
 .butt{
-    margin: .5vw .1vw;
+    
     float: right;
     background-color: #E24A52 !important;
   
@@ -67,11 +67,17 @@ h1{
    
 }
 .eachJob{
- max-width: 400px;
- height: 25%;
+ 
  
  
  background-color: white;
  margin: .5vw 0vw;
 };
 
+.jobscon{
+   
+}
+
+.bottom{
+   
+}

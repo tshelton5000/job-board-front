@@ -13,7 +13,11 @@
     
       <mat-card-subtitle class="Cname">{{job.company_name}}</mat-card-subtitle>
 
+     
   </div>
+  <div class="bottom">
+      
+
 
       <mat-card-content class="Bdes" ><p class="description">{{job.job_description | limitWord2 : 150 : '...'}}</p></mat-card-content>
 
@@ -21,13 +25,14 @@
 
 
     <mat-card-actions>
-      <button mat-raised-button class="butt"(click)="openUpdate(job.id)">Update</button>
+
       
-
-     
-
-    </mat-card-actions>
-
+      <mat-card-actions class="e">
+          <span class="spacer"><button mat-raised-button class="butt" (click)="openUpdate(job.id)">Update</button></span>
+        
+       
+      </mat-card-actions>
+</div>
 
   </mat-card>
 </section>
