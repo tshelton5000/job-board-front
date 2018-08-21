@@ -1,0 +1,46 @@
+<div class="upde">
+    <mat-card-header>
+      <h1>Update Job</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <!-- <img src="../../../assets/icons8-account-50.png"> -->
+      <mat-form-field class="jname">
+          <mat-label>Job Title</mat-label>
+        <input [(ngModel)]="jobsObj.job_title" matInput placeholder="{{jobsObj.job_title}}" required> 
+      </mat-form-field> 
+      <mat-form-field class="cname">
+          <mat-label>Company Name</mat-label>
+          <input [(ngModel)]="jobsObj.company_name" matInput placeholder="{{jobsObj.company_name}}" required>
+        </mat-form-field>
+      <br>
+      <mat-form-field  class="description"> 
+          <mat-label>Job Description</mat-label>
+        <textarea rows="10" [(ngModel)]="jobsObj.job_description" matInput placeholder="{{jobsObj.job_description}}"required></textarea>
+      </mat-form-field>
+      <br>
+     
+      <br>
+      <mat-form-field class="site">
+          <mat-label>Company's Website</mat-label>
+        <input [(ngModel)]="jobsObj.company_website" matInput placeholder="{{jobsObj.company_website}}" required>
+      </mat-form-field>
+  
+      <mat-form-field class="select">
+          <mat-select [(ngModel)]="jobsObj.job_type"  matSelect placeholder="{{jobsObj.job_type}}"required>
+            <mat-option value="fulltime">Full Time</mat-option>
+            <mat-option value="parttime">Part Time</mat-option>
+            <mat-option value="contract">Contract</mat-option>
+          </mat-select>
+        </mat-form-field>
+      <br>
+      <mat-form-field class="address">
+          <mat-label>Company Address</mat-label>
+        <input [(ngModel)]="jobsObj.company_address" matInput placeholder="{{jobsObj.company_address}}" required>
+      </mat-form-field>
+      <button mat-raised-button class="btn btn-danger pull-right" (click)="updateEmpJob()">Update</button>
+      <button mat-raised-button class="btn btn-danger pull-right" (click)="deleteEmpJob()">Delete</button>
+      <br>
+     
+    </mat-card-content>
+  
+  </div>

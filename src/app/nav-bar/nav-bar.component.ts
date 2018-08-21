@@ -11,7 +11,30 @@ export class NavBarComponent implements OnInit {
   constructor(private auth: AuthService) { }
 
   showEmpDash(){
-    if (this.auth.hasToken() && !this.auth.isStudent()){
+    if (sessionStorage.token && !this.auth.isStudent()){
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  showProfileButton(){
+    if (sessionStorage.token){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  showNavButton(){
+    if (sessionStorage.token){
+      return true;
+    } else {
+      return false;
+    }
+  }
+  showLogoutButton(){
+    if (sessionStorage.token){
       return true;
     } else {
       return false;

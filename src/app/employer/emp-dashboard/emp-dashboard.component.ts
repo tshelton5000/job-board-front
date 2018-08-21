@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { DataService } from '../../data.service';
+import {MatDialog} from '@angular/material';
+import { DetailsComponent } from './details/details.component';
+import { UpdateComponent } from './update/update.component';
 import { Observable } from 'rxjs'; 
-import { } from '../../shared//job-details/job-details.component'
+import { Jobs } from '../../models/jobs';
+
 @Component({
   selector: 'app-emp-dashboard',
   templateUrl: './emp-dashboard.component.html',
@@ -9,18 +13,35 @@ import { } from '../../shared//job-details/job-details.component'
 })
 export class EmpDashboardComponent implements OnInit {
 
-  jobs$: Object;
+ 
   modal: boolean = false;
-
+  jobs: any;
+ 
 OpenModal(){
 this.modal = true
 }
 
- constructor(private data: DataService){ }
+ constructor(private data: DataService, public dialog: MatDialog){ }
 
-  ngOnInit() {this.data.getJobs().subscribe(
-    data=> (console.log(this.jobs$ = data)));
-  }
+ 
+  ngOnInit() {
+    
+    this.data.getEmployerJobs().subscribe((res:any) => console.log(this.jobs = res.jobs))
+}
+
+
+
+
+openDetails(){
+  this.dialog.open(DetailsComponent);
+  
+}
+
+openUpdate(jobId){
+  this.dialog.open(UpdateComponent);
+  console.log(jobId);
+  this.data.storeEmpJobId(jobId);
+}
+
  }
-
 

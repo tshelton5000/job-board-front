@@ -5,10 +5,12 @@ import { JobpostsComponent } from './jobposts/jobposts.component';
 
 
 const routes: Routes = [
-{
-  path:'employer',
-  component: EmpDashboardComponent
-}
+  {path:'employer',
+  component: EmpDashboardComponent}
+,
+  {path:'jobposts',
+  component: JobpostsComponent}
+
 ];
 
 @NgModule({

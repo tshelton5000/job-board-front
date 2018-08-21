@@ -1,0 +1,80 @@
+
+p{
+    font-family: 'Roboto', sans-serif;   
+}
+h1{
+    font-size: 150%;
+    font-family: 'Roboto', sans-serif;
+}
+.title{
+    font-family: 'Roboto', sans-serif; 
+    
+}
+.Mname{
+ 
+    font-family: 'Roboto', sans-serif;
+}
+
+.jobscon{
+    overflow: auto;
+    width: 24.5vw;
+    height: 80vh;
+    
+    
+    
+    
+}
+
+.createJob{
+   
+   margin: 1.5vw;
+    width:100%;
+    float:right;
+}
+.cool{
+    height: 50px;
+    
+}
+li{
+    font-family: 'Roboto', sans-serif; 
+   
+    color: gray !important;  
+}
+.Cname{
+    font-family: 'Roboto', sans-serif; 
+   
+    color: gray !important;
+}
+.butt{
+    margin: .5vw .1vw;
+    float: right;
+}
+
+
+.eachJob{
+ width: 25vw;
+ height: 18vw;
+ 
+ 
+ background-color: white;
+ margin: .5vw 0vw;
+};
+.Bdes{
+    word-wrap: break-word;
+   
+    
+   
+}
+.description{
+   
+    width: 100%;
+   
+    text-align: justify;
+   
+}
+
+.bottom{
+    
+    height: 5vw;
+    word-wrap: break-word;
+}

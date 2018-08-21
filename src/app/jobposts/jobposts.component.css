@@ -1,0 +1,121 @@
+.allJobs{
+    background-color: rgb(144, 105, 180,0);
+    
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding:0vw 0vw 0vw 2.5vw;
+
+
+    
+}
+h1{
+    font-size: 150%;
+    font-family: 'Roboto', sans-serif;
+}
+.title{
+    padding:.5vw 0vw 0vw 2.5vw;
+    
+}
+.Mname{
+    color:black !important;
+    float: left;
+}
+.jobscon{
+    
+    overflow: auto;
+    width: 24.5vw;
+    
+    height: 80vh;
+    
+    
+    
+    
+}
+.dumb{
+    overflow: auto;
+    width: 100%;
+    
+    height: 40vh;
+    
+    
+    
+    
+}
+
+.createJob{
+   
+   margin: 1.5vw;
+    width:100%;
+    float:right;
+}
+
+.cool{
+    height: 50px;
+    
+}
+.dumbcool{
+    height: 50px;
+    width: 100%;
+    
+}
+.Cname{
+    float:right;
+    color: gray !important;
+}
+.butt{
+    margin: 1 3 3 1;
+   padding: 1px;
+    background-color: #E24A52 !important;
+  
+    color:white;
+}
+.description{
+   
+    width: 100%;
+   
+    text-align: justify;
+   
+}
+.Bdes{
+    word-wrap: break-word;
+    width:100%;
+    
+   
+}
+.eachJob{
+ max-width: 400px;
+
+ 
+ 
+ background-color: white;
+ margin: .5vw 0vw;
+};
+.dumbJob{
+    
+   
+    
+    
+    margin:0vw 1vw 1vw 1vw;
+   };
+.spacer{
+    width: 100vw;
+}
+.e{
+    width:100%;
+    
+    text-align: right;
+}
+
+.studentjobs{
+  height: 30px;
+  width:95%;
+  margin:0vw 1vw 1vw 0vw;
+}
+.studentdash{
+    width:80%;
+    margin:0vw 0vw 0vw 10vw;
+}
+
+.studentinfo{
+    margin:1vw 0vw 0vw 0vw;
+}

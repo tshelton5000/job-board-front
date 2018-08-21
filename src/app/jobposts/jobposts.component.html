@@ -1,3 +1,89 @@
-<p>
-    jobposts works!
-  </p>
+<div class="title">
+  <h1>Jobs Available Now</h1>
+</div>
+<div class="allJobs">
+  <section class="jobscon">
+    <mat-card class="eachJob" *ngFor="let job of jobs">
+      <div class="cool">
+        <mat-card-title>
+          <mat-checkbox class="Mname">{{job.job_title}}</mat-checkbox>
+        </mat-card-title>
+        <mat-card-subtitle class="Cname">{{job.company_name}}</mat-card-subtitle>
+      </div>
+      <mat-card-content class="Bdes">
+
+        
+
+        <p class="description">{{job.job_description | limitWord2 : 150 : '...'}}</p>
+
+      </mat-card-content>
+      <mat-card-actions class="e">
+          <span class="spacer"><button mat-raised-button class="butt" (click)="openDetails(job.id)">Details</button></span>
+        
+       
+      </mat-card-actions>
+    </mat-card>
+  </section>
+
+  <div class="studentdash"> <mat-card class="studentjobs"><h1>Jobs Applied</h1></mat-card><section class="dumb">
+      <mat-card class="dumbJob">
+        <div class="dumbcool">
+          <mat-card-title>
+            <mat-checkbox [checked]="myModel" class="Mname">Position</mat-checkbox>
+          </mat-card-title>
+          <mat-card-subtitle class="Cname">Company</mat-card-subtitle>
+        </div>
+        <mat-card-content class="Bdes">
+          <p class="description">Nothing's gonna make your husband or wife madder than coming home and having a snow-covered dinner. Mix your color marbly don't mix it dead. The more we do this - the more it will do good things to our heart.</p>
+          
+        </mat-card-content>
+       
+      
+      </mat-card>
+      <mat-card class="dumbJob">
+          <div class="dumbcool">
+            <mat-card-title>
+              <mat-checkbox [checked]="myModel" class="Mname">Position</mat-checkbox>
+            </mat-card-title>
+            <mat-card-subtitle class="Cname">Company</mat-card-subtitle>
+          </div>
+          <mat-card-content class="Bdes">
+            <p class="description">Nothing's gonna make your husband or wife madder than coming home and having a snow-covered dinner. Mix your color marbly don't mix it dead. The more we do this - the more it will do good things to our heart.</p>
+            
+          </mat-card-content>
+         
+        
+        </mat-card>
+        <mat-card class="dumbJob">
+            <div class="dumbcool">
+              <mat-card-title>
+                <mat-checkbox [checked]="myModel" class="Mname">Position</mat-checkbox>
+              </mat-card-title>
+              <mat-card-subtitle class="Cname">Company</mat-card-subtitle>
+            </div>
+            <mat-card-content class="Bdes">
+              <p class="description">Nothing's gonna make your husband or wife madder than coming home and having a snow-covered dinner. Mix your color marbly don't mix it dead. The more we do this - the more it will do good things to our heart.</p>
+              
+            </mat-card-content>
+           
+          
+          </mat-card>
+    </section><mat-card class="studentinfo"><h1>Student Information</h1>
+      <hr>
+      <mat-card-actions class="e">
+          <span class="spacer">
+            
+            <button mat-raised-button class="butt">Resume</button>
+            <button mat-raised-button class="butt">Portfolio</button>
+            <button mat-raised-button class="butt">Linkden</button>
+          
+          </span>
+        
+       
+      </mat-card-actions>
+    </mat-card></div>
+  
+
+
+<app-job-details *ngIf="modal"></app-job-details>
+</div>

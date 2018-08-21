@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
+import { Router } from "@angular/router"; 
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +10,61 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  userObj = {
+    first_name:'',
+    last_name:'',
+    password:'',
+    confirmPass:'',
+    resume:'',
+    company_name:''
   }
 
+  constructor(private userInfo: AuthService, private router: Router) { }
+
+  grabUser(){
+    this.userInfo.getUserData()
+      .subscribe((res:any) => {
+        if (this.userInfo.isStudent()){
+          this.userObj.first_name = res.student.first_name;
+          this.userObj.last_name = res.student.last_name;
+          this.userObj.resume = res.student.resume;
+        } else {
+          this.userObj.first_name = res.employer.first_name;
+          this.userObj.last_name = res.employer.last_name;
+          this.userObj.company_name = res.employer.company_name;
+        }
+        console.log(this.userObj)
+      })
+  }
+
+  removeUser(){
+    this.userInfo.deleteUserData()
+      .subscribe(res => {
+        console.log(res);
+        this.userInfo.removeUserObj();
+        this.router.navigate([''])
+      })
+  }
+ 
+  updateProfile(){
+    this.userInfo.updateUserData(this.userObj)
+      .subscribe(res => {
+        console.log(res)
+        this.grabUser()
+      })
+  }
+
+  showUser(){
+    console.log(this.userObj);
+  }
+
+  ngOnInit() {
+    this.grabUser()
+  }
+  user = {
+    first_name:'',
+    last_name:'',
+    company_name:'',
+    email:''
+    }
 }
