@@ -1,23 +1,25 @@
+
 <div class= "eachJob">
     <div class="cool">
 
-    <mat-card-title class="title">{{jobs.id.job_title}}</mat-card-title>
+    <mat-card-title class="title">{{job.job_title}}</mat-card-title>
   
 
 
     
-      <mat-card-subtitle class="Cname">{{jobs.id.company_name}}</mat-card-subtitle>
+      <mat-card-subtitle class="Cname">{{job.company_name}}</mat-card-subtitle>
 
   </div>
   <br>
 <hr>
   <div class="bottom">
-      <mat-card-content class="Bdes"><p class="description">{{jobs.id.job_description}}</p></mat-card-content>
+      <mat-card-content class="Bdes"><p class="description">{{job.job_description}}</p></mat-card-content>
 </div>
 <hr>
 <ul>
-  <li> www.website.com </li>
-  <li> Address </li>
-  <li> Job Type </li>
+  <li>{{job.company_site}}</li>
+  <li>{{job.company_address}}</li>
+  <li>{{job.job_type}}</li>
 </ul>
   </div>
+

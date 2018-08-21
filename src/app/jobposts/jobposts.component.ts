@@ -18,15 +18,15 @@ jobs:any;
  constructor(private data: DataService, public dialog: MatDialog){ }
 
   ngOnInit() {
-     this.data.getJobs().subscribe((res:any)=>console.log(this.jobs=res.jobs))
-    }
-    opendetails(){
-      this.dialog.open(DetailsComponent)
+     this.data.getJobs()
+     .subscribe((res:any)=>{
+      console.log(this.jobs=res.jobs)
+      // sessionStorage.setItem('jobs', this.jobs);
+      })
     }
 
  openDetails(number){
   this.dialog.open(DetailsComponent);
   this.data.getJobId(number)
+  }
 }
-}
-

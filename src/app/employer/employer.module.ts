@@ -9,23 +9,18 @@ import { SharedModule } from '../shared/shared.module';
 import { DetailsComponent } from './emp-dashboard/details/details.component';
 import { UpdateComponent } from './emp-dashboard/update/update.component';
 
-
-
-import {LimitWordPipe} from './limit-word.pipe';
-
 @NgModule({
   imports: [
     FormsModule,
     CommonModule,
     MaterialModule,
     EmployerRoutingModule,
-    SharedModule
-
+    SharedModule,
   ],
 
   exports: [JobsCreateComponent],
 
-  declarations: [EmpDashboardComponent,JobsCreateComponent, DetailsComponent, UpdateComponent, LimitWordPipe]
+  declarations: [EmpDashboardComponent,JobsCreateComponent, DetailsComponent, UpdateComponent]
 
 })
 export class EmployerModule { }

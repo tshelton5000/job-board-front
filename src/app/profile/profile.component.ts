@@ -24,7 +24,6 @@ export class ProfileComponent implements OnInit {
   grabUser(){
     this.userInfo.getUserData()
       .subscribe((res:any) => {
-        console.log(this.userInfo.userType)
         if (this.userInfo.isStudent()){
           this.userObj.first_name = res.student.first_name;
           this.userObj.last_name = res.student.last_name;
@@ -68,5 +67,4 @@ export class ProfileComponent implements OnInit {
     company_name:'',
     email:''
     }
-
 }
