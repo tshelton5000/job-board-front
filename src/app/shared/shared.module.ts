@@ -10,6 +10,7 @@ import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProfileComponent } from '../profile/profile.component';
+import { LimitWord2Pipe } from './limit-word-2.pipe';
 
 
 @NgModule({
@@ -20,10 +21,9 @@ import { ProfileComponent } from '../profile/profile.component';
         FormsModule,
     ],
     
-    exports: [JobDetailsComponent, FooterComponent],
+    exports: [JobDetailsComponent, FooterComponent, LimitWord2Pipe],
 
-
-    declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent, JobDetailsComponent, FooterComponent, ProfileComponent]
+    declarations: [AuthComponent, LoginComponent, SignupComponent, PagenotfoundComponent, JobDetailsComponent, FooterComponent, ProfileComponent, LimitWord2Pipe]
 })
 
 export class SharedModule {}

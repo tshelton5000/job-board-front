@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   email: string = '';
   password: string = '';
   token: any;
@@ -27,8 +27,23 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('token', this.token)
       this._router.navigate(['/jobposts'])
   },
-  err => alert("Email or Password is incorrect")
-   )}}
+
+  err => console.log(err)   
+   )
+}
+ }
+
+// studentHandleSubmit(){
+//     this.authService.logins(this.email, this.password)
+//     .subscribe(res => {sessionStorage.setItem('sessionToken', this.token)
+//     this._router.navigate(['/jobposts'])
+//   },
+//   err => console.log(err)
+//    )}
+
+//   err => alert("Email or Password is incorrect")
+//    )}}
+
 
    handleSubmits(){
      if (this.email === "" || this.password === "" ){
@@ -43,9 +58,6 @@ export class LoginComponent implements OnInit {
       this._router.navigate(['/jobposts'])
    },
    err => alert("Email or Password is incorrect")
-    )}}
-
-  ngOnInit() {
+    )}
   }
-
 }

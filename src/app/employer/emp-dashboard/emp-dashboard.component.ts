@@ -13,7 +13,7 @@ import { Jobs } from '../../models/jobs';
 })
 export class EmpDashboardComponent implements OnInit {
 
-  // jobs$: any;
+ 
   modal: boolean = false;
   jobs: any;
  
@@ -30,16 +30,18 @@ this.modal = true
 }
 
 
-openUpdate(){
-  this.dialog.open(UpdateComponent);
-}
+
 
 openDetails(){
   this.dialog.open(DetailsComponent);
   
 }
 
+openUpdate(jobId){
+  this.dialog.open(UpdateComponent);
+  console.log(jobId);
+  this.data.storeEmpJobId(jobId);
+}
+
  }
 
-
-//  data => (console.log(this.jobs = data)));

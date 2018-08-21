@@ -42,6 +42,7 @@ export class ProfileComponent implements OnInit {
     this.userInfo.deleteUserData()
       .subscribe(res => {
         console.log(res);
+        this.userInfo.removeUserObj();
         this.router.navigate([''])
       })
   }

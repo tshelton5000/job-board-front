@@ -18,6 +18,10 @@ export class AuthService {
     }
   }
 
+  removeUserObj(){
+    this.userObject = null;
+  }
+
   employerUser() {
     this.userType = 'Employer';
   }

@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material';
 
-import { DataService } from '../../../data.service';
+import {DataService} from '../../../data.service';
 
 import { JobpostsComponent } from '../../../jobposts/jobposts.component';
 
@@ -22,18 +22,9 @@ export class DetailsComponent implements OnInit {
       console.log(this.jobId)
       this.dataService.getJobById(this.jobId).subscribe((res:any)=> console.log(this.jobs = res))
     }
+
   }
 
-  // showJobId(){
-  //   this.jobId = this.dataService.retrieveJobId();
-  //   console.log(this.jobId)
-  // }
-
-  // jobDetails(){
-  //   this.jobId=this.dataService.retrieveJobId();
-  //   console.log(this.jobId)
-  //   this.dataService.getJobById(this.jobId).subscribe((res:any)=> console.log(this.jobs = res))
-  // }
-
+ 
 
 

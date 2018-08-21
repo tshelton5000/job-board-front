@@ -15,14 +15,17 @@
 
   </div>
 
-      <mat-card-content><p class="description">{{job.job_description | limitWord : 150 : '...'}}</p></mat-card-content>
+      <mat-card-content class="Bdes" ><p class="description">{{job.job_description | limitWord2 : 150 : '...'}}</p></mat-card-content>
 
 
 
 
     <mat-card-actions>
-      <button mat-raised-button class="butt"(click)="openUpdate()">Update</button>
+      <button mat-raised-button class="butt"(click)="openUpdate(job.id)">Update</button>
+      
+
      
+
     </mat-card-actions>
 
 
